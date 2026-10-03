@@ -173,6 +173,7 @@ globals().update(NOMINAL_PARAMS)
 # -----------------------------------------------------------------------------
 # OPTION A: Define by Municipalities / Regions (Empty when in "zones" mode)
 # -----------------------------------------------------------------------------
+"""
 CORRIDOR_REGIONS = {  # Named municipality groups defining the modeled corridor.
     "Zürich": ["Zürich"],
     "Winterthur": ["Winterthur"],
@@ -186,16 +187,35 @@ CORRIDOR_REGIONS = {  # Named municipality groups defining the modeled corridor.
         "Elgg", "Hagenbuch"
     ]
 }
+"""
+
+CORRIDOR_REGIONS = {
+    "Limmattal": [
+        "Zürich",
+        "Uitikon",
+        "Birmensdorf (ZH)",
+        "Urdorf",
+        "Schlieren",
+        "Dietikon",
+        "Geroldswil",
+        "Oetwil an der Limmat",
+        "Weiningen (ZH)",
+        "Unterengstringen",
+        "Oberengstringen"
+    ]
+}
 
 # Flat list of all corridor municipalities
 CORRIDOR_MUNICIPALITIES = [  # Derived flat list used by corridor selection and stage definitions.
     muni for munis in CORRIDOR_REGIONS.values() for muni in munis
 ]
 
+
 # Optional project-relative or absolute detailed road-network cache path.
 # Notebook 02 prepares a missing cache; later notebooks require it to exist.
 # None uses the existing default cache. For a new project, select a new filename.
-DETAILED_NETWORK_FILE = None  # Example: "data/processed/my_project_detailed_network.pkl"
+#DETAILED_NETWORK_FILE = None  # Example: "data/processed/my_project_detailed_network.pkl"
+DETAILED_NETWORK_FILE = "data/processed/cycling_limmattal_detailed_network.pkl"
 
 # -----------------------------------------------------------------------------
 # OPTION B: Define by Explicit Zone IDs
