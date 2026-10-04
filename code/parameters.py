@@ -190,25 +190,24 @@ CORRIDOR_REGIONS = {  # Named municipality groups defining the modeled corridor.
 """
 
 CORRIDOR_REGIONS = {
-    "Limmattal": [
-        "Zürich",
-        "Uitikon",
-        "Birmensdorf (ZH)",
-        "Urdorf",
-        "Schlieren",
-        "Dietikon",
-        "Geroldswil",
-        "Oetwil an der Limmat",
-        "Weiningen (ZH)",
-        "Unterengstringen",
-        "Oberengstringen"
-    ]
+    "Zürich": ["Zürich"],
+    "Uitikon": ["Uitikon"],
+    "Birmensdorf": ["Birmensdorf (ZH)"],
+    "Urdorf": ["Urdorf"],
+    "Schlieren": ["Schlieren"],
+    "Dietikon": ["Dietikon"],
+    "Geroldswil": ["Geroldswil"],
+    "Oetwil an der Limmat": ["Oetwil an der Limmat"],
+    "Weiningen": ["Weiningen (ZH)"],
+    "Unterengstringen": ["Unterengstringen"],
+    "Oberengstringen": ["Oberengstringen"],
 }
 
 # Flat list of all corridor municipalities
 CORRIDOR_MUNICIPALITIES = [  # Derived flat list used by corridor selection and stage definitions.
     muni for munis in CORRIDOR_REGIONS.values() for muni in munis
 ]
+
 
 
 # Optional project-relative or absolute detailed road-network cache path.
