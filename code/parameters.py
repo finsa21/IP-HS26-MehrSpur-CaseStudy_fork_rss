@@ -191,8 +191,6 @@ CORRIDOR_REGIONS = {  # Named municipality groups defining the modeled corridor.
 
 CORRIDOR_REGIONS = {
     "Zürich": ["Zürich"],
-    "Uitikon": ["Uitikon"],
-    "Birmensdorf": ["Birmensdorf (ZH)"],
     "Urdorf": ["Urdorf"],
     "Schlieren": ["Schlieren"],
     "Dietikon": ["Dietikon"],
