@@ -190,7 +190,6 @@ CORRIDOR_REGIONS = {  # Named municipality groups defining the modeled corridor.
 """
 
 CORRIDOR_REGIONS = {
-    "Zürich": ["Zürich"],
     "Urdorf": ["Urdorf"],
     "Schlieren": ["Schlieren"],
     "Dietikon": ["Dietikon"],
