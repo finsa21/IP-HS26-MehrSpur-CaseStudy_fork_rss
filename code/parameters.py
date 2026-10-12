@@ -53,9 +53,11 @@ NOMINAL_PARAMS = {
     "PT_ASC_SHIFT_Y40": 0.10,  # Nominal final PT preference shift (utility units).
     "BIKE_ASC_SHIFT": 0.0,  # Additive preference shift for standalone cycling (utility units).
     # "BIKE_ASC_SHIFT_Y40": 0.20,  # Optional nominal final cycling preference shift (utility units).
-    "EBIKE_SHARE": 0.25,  # Baseline e-bike fraction of cycling and PT bicycle access/egress trips (0 to 1).
+    #"EBIKE_SHARE": 0.25,  # Baseline e-bike fraction of cycling and PT bicycle access/egress trips (0 to 1).
+    "EBIKE_SHARE": 0.35,  # Baseline e-bike fraction of cycling and PT bicycle access/egress trips (0 to 1).
     "EBIKE_SHARE_Y40": 0.50,  # Nominal final e-bike share.
-    "EBIKE_SPEED_MULTIPLIER": 1.5,  # E-bike speed divided by conventional-bike speed; 1.5 means 50% faster.
+    #"EBIKE_SPEED_MULTIPLIER": 1.5,  # E-bike speed divided by conventional-bike speed; 1.5 means 50% faster.
+    "EBIKE_SPEED_MULTIPLIER": 1.35,  # E-bike speed divided by conventional-bike speed; 1.5 means 50% faster.
     "ROAD_FREIGHT_GROWTH": 0.0,  # Growth in prepared commercial/freight vehicles and their synthetic uplift.
     "ROAD_FREIGHT_GROWTH_Y40": 0.10,  # Nominal final growth of prepared background road vehicles.
 
@@ -110,9 +112,9 @@ NOMINAL_PARAMS = {
     # Health rates apply to standalone cycling/walking person-km, including e-bikes.
     # The PT rate applies once per person-trip, including supplementary PT passengers.
     # Positive rates reduce societal costs; omitted rates default to zero.
-    # "BENEFIT_HEALTH_BIKE_PER_KM": 1.0,  # Cycling health benefit (CHF/person-km).
-    # "BENEFIT_HEALTH_WALK_PER_KM": 1.0,  # Walking health benefit (CHF/person-km).
-    # "BENEFIT_SOCIOECONOMIC_PT_PER_TRIP": 1.0,  # Additional PT benefit (CHF/person-trip).
+    "BENEFIT_HEALTH_BIKE_PER_KM": 1.306,  # Cycling health benefit (CHF/person-km).
+    "BENEFIT_HEALTH_WALK_PER_KM": 1.0,  # Walking health benefit (CHF/person-km).
+    "BENEFIT_SOCIOECONOMIC_PT_PER_TRIP": 1.0,  # Additional PT benefit (CHF/person-trip).
 
     # -------------------------------------------------------------------------
     # Physical CO2 emissions and their common monetary value
@@ -157,6 +159,8 @@ NOMINAL_PARAMS = {
     # -------------------------------------------------------------------------
     "MAX_AVG_TT": 15.0,  # Acceptability ceiling for peak car/PT in-vehicle time plus car delay (min/trip).
     "PT_SHARE_TARGET": 0.35,  # Teaching minimum for PT share of strategic passenger-km; baseline is about 31.9%.
+    "BIKE_SHARE_TARGET": 0.35,  # .
+
     "MIN_STRATEGIC_PKM_DISTANCE": 5.0,  # Minimum OD distance for strategic mode-share indicators (km); not an appraisal cutoff.
 
     # Internal shared keys for appraisal and uncertainties; edit values in stages.py.
