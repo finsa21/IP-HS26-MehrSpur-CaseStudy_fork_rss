@@ -52,7 +52,7 @@ NOMINAL_PARAMS = {
     "PT_ASC_SHIFT": 0.0,  # Additive preference shift for both PT access modes (utility units, not percent).
     "PT_ASC_SHIFT_Y40": 0.10,  # Nominal final PT preference shift (utility units).
     "BIKE_ASC_SHIFT": 0.0,  # Additive preference shift for standalone cycling (utility units).
-    # "BIKE_ASC_SHIFT_Y40": 0.20,  # Optional nominal final cycling preference shift (utility units).
+    "BIKE_ASC_SHIFT_Y40": 0.20,  # Optional nominal final cycling preference shift (utility units).
     #"EBIKE_SHARE": 0.25,  # Baseline e-bike fraction of cycling and PT bicycle access/egress trips (0 to 1).
     "EBIKE_SHARE": 0.35,  # Baseline e-bike fraction of cycling and PT bicycle access/egress trips (0 to 1).
     "EBIKE_SHARE_Y40": 0.50,  # Nominal final e-bike share.
@@ -66,8 +66,8 @@ NOMINAL_PARAMS = {
     # -------------------------------------------------------------------------
     # National NPVM processing ratios, not measured local hourly counts.
     # Cycling/walking use the processor's teaching assumption; no off-peak solve is run.
-    "PT_PEAK_SHARE": 0.0946,  # Representative peak-hour PT trips / weekday PT trips; NPVM conversion assumption.
-    "CAR_PEAK_SHARE": 0.1049,  # Representative peak-hour car trips / weekday car trips; NPVM conversion assumption.
+    "PT_PEAK_SHARE": 0.11,  # Representative peak-hour PT trips / weekday PT trips; NPVM conversion assumption.
+    "CAR_PEAK_SHARE": 0.094,  # Representative peak-hour car trips / weekday car trips; NPVM conversion assumption.
     "BIKE_PEAK_SHARE": 0.15,  # Peak-hour share of daily cycling trips; editable teaching assumption.
     "WALK_PEAK_SHARE": 0.15,  # Peak-hour share of daily walking trips; editable teaching assumption.
     "EQUIVALENT_DAYS_PER_YEAR": 300,  # Equivalent operating weekdays represented in one appraisal year.
@@ -97,13 +97,13 @@ NOMINAL_PARAMS = {
     # -------------------------------------------------------------------------
     # Values of passenger time (CHF/person-hour)
     # -------------------------------------------------------------------------
-    "C_TT_CAR": 42.54,  # Car travel-time value, including peak congestion delay (CHF/person-hour).
-    "C_TT_PT": 26.52,  # PT in-vehicle time value (CHF/person-hour).
-    "C_TT_PT_WAITING": 26.52,  # Initial and transfer waiting-time value (CHF/person-hour).
-    "C_TT_PT_ACCESS": 26.52,  # PT access and egress walking/cycling time value (CHF/person-hour).
-    "C_TT_PT_TRANSFER": 26.52,  # Physical transfer-walking time value (CHF/person-hour); excludes waiting.
+    "C_TT_CAR": 23.30,  # Car travel-time value, including peak congestion delay (CHF/person-hour).
+    "C_TT_PT": 26.52,  # PT in-vehicle time value (CHF/person-hour). #irrelevant
+    "C_TT_PT_WAITING": 26.52,  # Initial and transfer waiting-time value (CHF/person-hour). #irrelevant
+    "C_TT_PT_ACCESS": 26.52,  # PT access and egress walking/cycling time value (CHF/person-hour). #irrelevant
+    "C_TT_PT_TRANSFER": 26.52,  # Physical transfer-walking time value (CHF/person-hour); excludes waiting. #irrelevant
     # Active-mode time is valued per person-hour, like PT/car passenger time.
-        "C_TT_BIKE": 35.0,  # Cycling value of time (CHF/person-hour)
+        "C_TT_BIKE": 24.80,  # Cycling value of time (CHF/person-hour) #18.70
     "C_TT_WALK": 16.0,  # Walking value of time (CHF/person-hour)
 
     # -------------------------------------------------------------------------
@@ -112,9 +112,9 @@ NOMINAL_PARAMS = {
     # Health rates apply to standalone cycling/walking person-km, including e-bikes.
     # The PT rate applies once per person-trip, including supplementary PT passengers.
     # Positive rates reduce societal costs; omitted rates default to zero.
-    "BENEFIT_HEALTH_BIKE_PER_KM": 1.306,  # Cycling health benefit (CHF/person-km).
+    "BENEFIT_HEALTH_BIKE_PER_KM": 1.306,  # Cycling health benefit (CHF/person-km). #report
     "BENEFIT_HEALTH_WALK_PER_KM": 1.0,  # Walking health benefit (CHF/person-km).
-    "BENEFIT_SOCIOECONOMIC_PT_PER_TRIP": 1.0,  # Additional PT benefit (CHF/person-trip).
+    "BENEFIT_SOCIOECONOMIC_PT_PER_TRIP": 0.0,  # Additional PT benefit (CHF/person-trip). #we want the cycliiiiing
 
     # -------------------------------------------------------------------------
     # Physical CO2 emissions and their common monetary value
@@ -159,9 +159,9 @@ NOMINAL_PARAMS = {
     # -------------------------------------------------------------------------
     "MAX_AVG_TT": 15.0,  # Acceptability ceiling for peak car/PT in-vehicle time plus car delay (min/trip).
     "PT_SHARE_TARGET": 0.35,  # Teaching minimum for PT share of strategic passenger-km; baseline is about 31.9%.
-    "BIKE_SHARE_TARGET": 0.35,  # .
+    "BIKE_SHARE_TARGET": 0.20,  # .
 
-    "MIN_STRATEGIC_PKM_DISTANCE": 5.0,  # Minimum OD distance for strategic mode-share indicators (km); not an appraisal cutoff.
+    "MIN_STRATEGIC_PKM_DISTANCE": 2.0,  # Minimum OD distance for strategic mode-share indicators (km); not an appraisal cutoff.
 
     # Internal shared keys for appraisal and uncertainties; edit values in stages.py.
     **package_parameter_defaults(),
@@ -378,7 +378,7 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "use": "sensitivity",
         "transient": False,
         "distribution": "uniform",
-        "minimum": 31.91,
+        "minimum": 20.00,
         "maximum": 53.18,
     },
     "CO2_VALUE_CHF_PER_TONNE": {  # Draw the reference-year value once (constant 2019 CHF/tonne CO2).
