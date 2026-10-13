@@ -168,115 +168,174 @@ PACKAGES = {
     #       Relieves surface bottlenecks before tunnel completion, stabilizing network timetables.
     #       Reduces station access/egress and physical transfer walking.
     #       Shortens service headway and raises the section comfort threshold.
-
+    
 
     "stations": {
-        "name": "Stage 1 – Local Stations & Access Package",
-
-        # Railway improvements
-        # Section minutes follow parameters.SECTION route coverage, including
-        # through travelers. Shorter headways reduce initial and transfer waiting
-        # between different CORRIDOR_MUNICIPALITIES, in both directions.
-        "railway_expansions": [
+        "name": "Stage 1 – Bike Highway Altstetten–Schlieren",
+        "bike_highways": [
             {
-                "section_time_saving_min": 1.0,  # In-vehicle minutes saved relative to baseline.
-                "headway_reduction_min": 1.0,  # Minutes removed from the baseline service interval.
-                "capacity_increase": 0.10,  # Fraction of baseline peak-hour comfort capacity (+10%).
-            },
-        ],
-
-        # Hub & Node Interventions
-        "mobility_hubs": [
-            {
-                "name": "Station Upgrades (Dietlikon, Bassersdorf, Wallisellen)",
-                "zones": [
-                    {"municipality_name": "Dietlikon"},
-                    {"municipality_name": "Bassersdorf"},
-                    {"municipality_name": "Wallisellen"}
+                "name": "Bike Highway Stage 1",
+                "area_pairs": [
+                    {
+                        "origin": {"city_quartier": "Altstetten"},
+                        "destination": {"municipality_name": "Schlieren"}
+                    },
+                    {
+                        "origin": {"city_quartier": "Altstetten"},
+                        "destination": {"municipality_name": "Dietikon"}
+                    }
                 ],
+                "both_directions": True,
                 "effects": {
-                    "access_time_reduction_pct": 25.0,  # Improved pedestrian ramps & bus loop access
-                    "transfer_time_reduction_pct": 15.0, # Shorter platform transfer paths
-                    # Frequency savings belong to the railway package only.
-                    "egress_time_reduction_pct": 20.0,
+                    "speed_increase_pct": 20.0,
+                    "distance_reduction_pct": 0.0
                 }
             }
         ],
-
-        # Appraisal considerations
-        # CAPEX is the base construction cost, before CAPEX_MULTIPLIER.
-        # Only capital_share retains residual value; the rest has none.
-        # At horizon H, opening in year y means H - y + 1 operated years.
-        # The remaining eligible value decreases linearly to zero over lifetime_years.
-        # Set capital_share to 0 to disable residual valuation (lifetime may then be None).
-        # No asset replacement is assumed.
         "appraisal": {
-            "capital_cost_chf": 925_000_000,  # Station-package CAPEX (CHF).
-            "lifetime_years": 80,  # Service life of the share valued below (years).
-            "capital_share": 0.60,  # Fraction of actual capital paid eligible for residual value.
-            # Total construction emissions (tonnes CO2e), spread over construction years.
-            # Pre-horizon emissions are charged at time zero; omitted entries mean zero.
-            # "construction_co2_tonnes": 0.0,  # Add a project-specific total when available.
-        },
+            "capital_cost_chf": 0,
+            "lifetime_years": 40,
+            "capital_share": 0.80
+        }
     },
 
-    # --- Tunnel package ---
-    # Core Tunnel & Winterthur Hub Package (A0 Gesamt, A1 Winterthur, A2 Tunnel)
-    #
-    # ⚠️ STUDENT INSTRUCTION:
-    # Replace this package with your own long-term or secondary interventions.
-    #
-    # SBB MehrSpur tunnel scope (opening dates are configured in adaptive_planning.py):
-    #
-    #       A0 Gesamtprojekt: System-wide technical integration,
-    #       ETCS Level 2 signaling, traction power supply, and overall project management.
-    #
-    #       A1 Winterthur: Major track layout reconfiguration at Winterthur HB,
-    #       adding grade-separated flyovers, extended platforms, and conflict-free routing.
-    #
-    #       A2 Tunnel: 8.3 km twin-tube Brüttenertunnel cutting directly between
-    #       Dietlikon/Bassersdorf and Winterthur, bypassing the curvy Effretikon bottleneck.
-    #
-    # Transport & Economic Impact:
-    #       Saves 4 minutes on covered routes and raises the comfort threshold by 15%.
-    #       Provides 17-minute service and the Winterthur hub improvements;
-    #       both packages together provide 15-minute service.
     "tunnel": {
-        "name": "Stage 2 - Tunnel & Winterthur Hub only",
-
-        # Railway improvements: the same section and service OD scope as above.
-        "railway_expansions": [
+        "name": "Stage 2 – Bike Highway Schlieren–AG Border",
+        "bike_highways": [
             {
-                "section_time_saving_min": 4.0,  # In-vehicle minutes saved relative to baseline.
-                "headway_reduction_min": 3.0,  # Minutes removed from the baseline service interval.
-                "capacity_increase": 0.15,  # Fraction of baseline peak-hour comfort capacity (+15%).
-            },
-        ],
-
-        # Hub & Node Interventions
-        "mobility_hubs": [
-            {
-                "name": "Winterthur Multimodal Hub (A1)",
-                "zones": [
-                    {"municipality_name": "Winterthur"}
+                "name": "Bike Highway Stage 2",
+                "area_pairs": [
+                    {
+                        "origin": {"municipality_name": "Schlieren"},
+                        "destination": {"municipality_name": "Dietikon"}
+                    },
+                    {
+                        "origin": {"city_quartier": "Altstetten"},
+                        "destination": {"municipality_name": "Dietikon"}
+                    }
                 ],
+                "both_directions": True,
                 "effects": {
-                    "access_time_reduction_pct": 25.0,
-                    "transfer_time_reduction_pct": 15.0, # Optimized platform connections at Winterthur HB
-                    # Frequency savings belong to the railway package only.
-                    "egress_time_reduction_pct": 20.0,
+                    "speed_increase_pct": 20.0,
+                    "distance_reduction_pct": 0.0
                 }
             }
         ],
-
-        # Appraisal considerations: the same valuation and construction conventions.
         "appraisal": {
-            "capital_cost_chf": 2_302_600_000,  # Tunnel/Winterthur package CAPEX (CHF).
-            "lifetime_years": 80,  # Service life of the share valued below (years).
-            "capital_share": 0.60,  # Fraction of actual capital paid eligible for residual value.
-            "construction_co2_tonnes": 300_000.0,  # Total construction emissions (tonnes CO2e).
-        },
-    },
+            "capital_cost_chf": 0,
+            "lifetime_years": 40,
+            "capital_share": 0.80
+        }
+    }
+
+    
+    # "stations": {
+    #     "name": "Stage 1 – Local Stations & Access Package",
+
+    #     # Railway improvements
+    #     # Section minutes follow parameters.SECTION route coverage, including
+    #     # through travelers. Shorter headways reduce initial and transfer waiting
+    #     # between different CORRIDOR_MUNICIPALITIES, in both directions.
+    #     "railway_expansions": [
+    #         {
+    #             "section_time_saving_min": 1.0,  # In-vehicle minutes saved relative to baseline.
+    #             "headway_reduction_min": 1.0,  # Minutes removed from the baseline service interval.
+    #             "capacity_increase": 0.10,  # Fraction of baseline peak-hour comfort capacity (+10%).
+    #         },
+    #     ],
+
+    #     # Hub & Node Interventions
+    #     "mobility_hubs": [
+    #         {
+    #             "name": "Station Upgrades (Dietlikon, Bassersdorf, Wallisellen)",
+    #             "zones": [
+    #                 {"municipality_name": "Dietlikon"},
+    #                 {"municipality_name": "Bassersdorf"},
+    #                 {"municipality_name": "Wallisellen"}
+    #             ],
+    #             "effects": {
+    #                 "access_time_reduction_pct": 25.0,  # Improved pedestrian ramps & bus loop access
+    #                 "transfer_time_reduction_pct": 15.0, # Shorter platform transfer paths
+    #                 # Frequency savings belong to the railway package only.
+    #                 "egress_time_reduction_pct": 20.0,
+    #             }
+    #         }
+    #     ],
+
+    #     # Appraisal considerations
+    #     # CAPEX is the base construction cost, before CAPEX_MULTIPLIER.
+    #     # Only capital_share retains residual value; the rest has none.
+    #     # At horizon H, opening in year y means H - y + 1 operated years.
+    #     # The remaining eligible value decreases linearly to zero over lifetime_years.
+    #     # Set capital_share to 0 to disable residual valuation (lifetime may then be None).
+    #     # No asset replacement is assumed.
+    #     "appraisal": {
+    #         "capital_cost_chf": 925_000_000,  # Station-package CAPEX (CHF).
+    #         "lifetime_years": 80,  # Service life of the share valued below (years).
+    #         "capital_share": 0.60,  # Fraction of actual capital paid eligible for residual value.
+    #         # Total construction emissions (tonnes CO2e), spread over construction years.
+    #         # Pre-horizon emissions are charged at time zero; omitted entries mean zero.
+    #         # "construction_co2_tonnes": 0.0,  # Add a project-specific total when available.
+    #     },
+    # },
+
+    # # --- Tunnel package ---
+    # # Core Tunnel & Winterthur Hub Package (A0 Gesamt, A1 Winterthur, A2 Tunnel)
+    # #
+    # # ⚠️ STUDENT INSTRUCTION:
+    # # Replace this package with your own long-term or secondary interventions.
+    # #
+    # # SBB MehrSpur tunnel scope (opening dates are configured in adaptive_planning.py):
+    # #
+    # #       A0 Gesamtprojekt: System-wide technical integration,
+    # #       ETCS Level 2 signaling, traction power supply, and overall project management.
+    # #
+    # #       A1 Winterthur: Major track layout reconfiguration at Winterthur HB,
+    # #       adding grade-separated flyovers, extended platforms, and conflict-free routing.
+    # #
+    # #       A2 Tunnel: 8.3 km twin-tube Brüttenertunnel cutting directly between
+    # #       Dietlikon/Bassersdorf and Winterthur, bypassing the curvy Effretikon bottleneck.
+    # #
+    # # Transport & Economic Impact:
+    # #       Saves 4 minutes on covered routes and raises the comfort threshold by 15%.
+    # #       Provides 17-minute service and the Winterthur hub improvements;
+    # #       both packages together provide 15-minute service.
+    # "tunnel": {
+    #     "name": "Stage 2 - Tunnel & Winterthur Hub only",
+
+    #     # Railway improvements: the same section and service OD scope as above.
+    #     "railway_expansions": [
+    #         {
+    #             "section_time_saving_min": 4.0,  # In-vehicle minutes saved relative to baseline.
+    #             "headway_reduction_min": 3.0,  # Minutes removed from the baseline service interval.
+    #             "capacity_increase": 0.15,  # Fraction of baseline peak-hour comfort capacity (+15%).
+    #         },
+    #     ],
+
+    #     # Hub & Node Interventions
+    #     "mobility_hubs": [
+    #         {
+    #             "name": "Winterthur Multimodal Hub (A1)",
+    #             "zones": [
+    #                 {"municipality_name": "Winterthur"}
+    #             ],
+    #             "effects": {
+    #                 "access_time_reduction_pct": 25.0,
+    #                 "transfer_time_reduction_pct": 15.0, # Optimized platform connections at Winterthur HB
+    #                 # Frequency savings belong to the railway package only.
+    #                 "egress_time_reduction_pct": 20.0,
+    #             }
+    #         }
+    #     ],
+
+    #     # Appraisal considerations: the same valuation and construction conventions.
+    #     "appraisal": {
+    #         "capital_cost_chf": 2_302_600_000,  # Tunnel/Winterthur package CAPEX (CHF).
+    #         "lifetime_years": 80,  # Service life of the share valued below (years).
+    #         "capital_share": 0.60,  # Fraction of actual capital paid eligible for residual value.
+    #         "construction_co2_tonnes": 300_000.0,  # Total construction emissions (tonnes CO2e).
+    #     },
+    # },
 }
 
 # =============================================================================
