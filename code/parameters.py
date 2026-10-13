@@ -342,14 +342,6 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "maximum": 0.30,
     },
     # Uncomment together with BIKE_ASC_SHIFT_Y40 above to include cycling preferences.
-    # "BIKE_ASC_SHIFT": {
-    #     "category": "transport_modelling",
-    #     "use": "scenarios",
-    #     "transient": True,
-    #     "distribution": "triangular",
-    #     "minimum": -0.50,
-    #     "maximum": 1.00,
-    # },
     "EBIKE_SHARE": {  # Final e-bike fraction; starts from the known baseline share.
         "category": "transport_modelling",
         "use": "scenarios",

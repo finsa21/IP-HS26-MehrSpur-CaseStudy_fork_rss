@@ -171,7 +171,7 @@ PACKAGES = {
     
 
     "stations": {
-        "name": "Stage 1 – Bike Highway Altstetten–Schlieren",
+        "name": "Stage 1 – Bike Highway Zürich Altstetten–Schlieren",
         "bike_highways": [
             {
                 "name": "Bike Highway Stage 1",
@@ -179,28 +179,25 @@ PACKAGES = {
                     {
                         "origin": {"city_quartier": "Altstetten"},
                         "destination": {"municipality_name": "Schlieren"}
-                    },
-                    {
-                        "origin": {"city_quartier": "Altstetten"},
-                        "destination": {"municipality_name": "Dietikon"}
                     }
                 ],
                 "both_directions": True,
                 "effects": {
-                    "speed_increase_pct": 20.0,
+                    "speed_increase_pct": 65.00, #based on 13 kmh average speed --> 20 kmh
                     "distance_reduction_pct": 0.0
                 }
             }
         ],
         "appraisal": {
-            "capital_cost_chf": 0,
+            "capital_cost_chf": 10_500_000.00,
             "lifetime_years": 40,
-            "capital_share": 0.80
+            "capital_share": 0.80,
+            "construction_co2_tonnes": 0
         }
     },
 
     "tunnel": {
-        "name": "Stage 2 – Bike Highway Schlieren–AG Border",
+        "name": "Stage 2 – Bike Highway Schlieren–Dietikon",
         "bike_highways": [
             {
                 "name": "Bike Highway Stage 2",
@@ -208,25 +205,22 @@ PACKAGES = {
                     {
                         "origin": {"municipality_name": "Schlieren"},
                         "destination": {"municipality_name": "Dietikon"}
-                    },
-                    {
-                        "origin": {"city_quartier": "Altstetten"},
-                        "destination": {"municipality_name": "Dietikon"}
                     }
                 ],
                 "both_directions": True,
                 "effects": {
-                    "speed_increase_pct": 20.0,
+                    "speed_increase_pct": 65.00,
                     "distance_reduction_pct": 0.0
                 }
             }
         ],
         "appraisal": {
-            "capital_cost_chf": 0,
+            "capital_cost_chf": 13_000_000.00,
             "lifetime_years": 40,
-            "capital_share": 0.80
+            "capital_share": 0.80,
+            "construction_co2_tonnes": 0
         }
-    }
+    },
 
     
     # "stations": {
@@ -345,13 +339,6 @@ PACKAGES = {
 # are added to the package values: 6 minutes of section saving and 5 minutes
 # of headway reduction in total (20-minute baseline -> 15-minute service).
 COMBINED_EFFECTS = {
-    "railway_expansions": [
-        {
-            "section_time_saving_min": 1.0,
-            "headway_reduction_min": 1.0,
-            "capacity_increase": 0.05,  # Extra fraction of baseline capacity, only when both packages operate.
-        },
-    ],
     # Capacity increases are additive: +10% stations +15% tunnel +5% combined = +30% of baseline.
     # Additional physical interventions can use the same dictionaries as above:
     # "mobility_hubs": [{
@@ -369,7 +356,12 @@ COMBINED_EFFECTS = {
 # INTERNAL ASSEMBLY AND APPRAISAL HELPERS (normally leave unchanged)
 # =============================================================================
 STATE_IDS = (0, 1, 2, 3)
-STATE_LABELS = {0: "Baseline", 1: "Stations only", 2: "Tunnel only", 3: "Stations + tunnel"}
+STATE_LABELS = {
+    0: "Baseline",
+    1: "Bike Highway Stage 1",
+    2: "Bike Highway Stage 2",
+    3: "Bike Highway Stage 1 + 2"
+}
 STATE_COLORS = {0: "#9E9E9E", 1: "#FFC107", 2: "#2196F3", 3: "#4CAF50"}
 _STATE_COMPONENTS = {0: (False, False), 1: (True, False), 2: (False, True), 3: (True, True)}
 
