@@ -170,24 +170,18 @@ PACKAGES = {
     #       Shortens service headway and raises the section comfort threshold.
     
 
-    "stations": {
-        "name": "Stage 1 – Bike Highway Zürich Altstetten–Schlieren",
-        "bike_highways": [
-            {
-                "name": "Bike Highway Stage 1",
-                "area_pairs": [
-                    {
-                        "origin": {"city_quartier": "Altstetten"},
-                        "destination": {"municipality_name": "Schlieren"}
-                    }
-                ],
-                "both_directions": True,
-                "effects": {
-                    "speed_increase_pct": 65.00, #based on 13 kmh average speed --> 20 kmh
-                    "distance_reduction_pct": 0.0
-                }
-            }
-        ],
+    'stations': {'name': 'Stage 1 – Bike Highway Zürich Altstetten–Schlieren',
+              'bike_highways': [{'name': 'Bike Highway Stage 1',
+                                 'area_pairs': [{'origin': {'city_quartier': 'Altstetten'},
+                                                 'destination': {'municipality_name': 'Schlieren'}}],
+                                 'both_directions': True,
+                                 'effects': {'speed_increase_pct': 54.0,
+                                             'distance_reduction_pct': 0.0}},
+                                {'effects': {'speed_increase_pct': 27.0},
+                                 'name': 'Indirect Effect 3',
+                                 'area_pairs': [{'origin': {'municipality_name': 'Zürich'},
+                                                 'destination': {'municipality_name': 'Urdorf'}}],
+                                 'both_directions': True}],
         "appraisal": {
             "capital_cost_chf": 10_500_000.00,
             "lifetime_years": 40,
@@ -209,7 +203,7 @@ PACKAGES = {
                 ],
                 "both_directions": True,
                 "effects": {
-                    "speed_increase_pct": 65.00,
+                    "speed_increase_pct": 54.00,
                     "distance_reduction_pct": 0.0
                 }
             }
@@ -338,18 +332,24 @@ PACKAGES = {
 # Extra effects available only when BOTH packages are operating. These minutes
 # are added to the package values: 6 minutes of section saving and 5 minutes
 # of headway reduction in total (20-minute baseline -> 15-minute service).
-COMBINED_EFFECTS = {
-    # Capacity increases are additive: +10% stations +15% tunnel +5% combined = +30% of baseline.
-    # Additional physical interventions can use the same dictionaries as above:
-    # "mobility_hubs": [{
-    #     "name": "Shared interchange improvement",
-    #     "zones": [{"municipality_name": "Dietlikon"}],
-    #     "effects": {"transfer_time_reduction_pct": 10.0},
-    # }],
-    # Add OD-specific PT effects as further railway_expansions entries.
-    # Other supported keys: bike_highways, road_capacity.
-    # Specify frequency changes above, to apply their waiting benefit only once.
-}
+COMBINED_EFFECTS = {'bike_highways': [{'effects': {'speed_increase_pct': 32.0},
+                    'name': 'Indirect effect 1',
+                    'area_pairs': [{'origin': {'municipality_name': 'Schlieren'},
+                                    'destination': {'municipality_name': 'Geroldswil'}}],
+                    'both_directions': True},
+                   {'effects': {'speed_increase_pct': 40.0},
+                    'name': 'Indirect Effect 2',
+                    'area_pairs': [{'origin': {'municipality_name': 'Schlieren'},
+                                    'destination': {'municipality_name': 'Oetwil '
+                                                                         'an '
+                                                                         'der '
+                                                                         'Limmat'}}],
+                    'both_directions': True},
+                   {'effects': {'speed_increase_pct': 31.0},
+                    'name': 'Indirect Effect 4',
+                    'area_pairs': [{'origin': {'municipality_name': 'Oberengstringen'},
+                                    'destination': {'municipality_name': 'Dietikon'}}],
+                    'both_directions': True}]}
 
 
 # =============================================================================
