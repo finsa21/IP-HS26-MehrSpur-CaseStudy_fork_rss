@@ -103,7 +103,7 @@ NOMINAL_PARAMS = {
     "C_TT_PT_ACCESS": 26.52,  # PT access and egress walking/cycling time value (CHF/person-hour). #irrelevant
     "C_TT_PT_TRANSFER": 26.52,  # Physical transfer-walking time value (CHF/person-hour); excludes waiting. #irrelevant
     # Active-mode time is valued per person-hour, like PT/car passenger time.
-        "C_TT_BIKE": 24.80,  # Cycling value of time (CHF/person-hour) #18.70
+    "C_TT_BIKE": 24.80,  # Cycling value of time (CHF/person-hour) #18.70
     "C_TT_WALK": 16.0,  # Walking value of time (CHF/person-hour)
 
     # -------------------------------------------------------------------------
@@ -342,14 +342,14 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "maximum": 0.30,
     },
     # Uncomment together with BIKE_ASC_SHIFT_Y40 above to include cycling preferences.
-    # "BIKE_ASC_SHIFT": {
-    #     "category": "transport_modelling",
-    #     "use": "scenarios",
-    #     "transient": True,
-    #     "distribution": "triangular",
-    #     "minimum": -0.50,
-    #     "maximum": 1.00,
-    # },
+    "BIKE_ASC_SHIFT": {
+         "category": "transport_modelling",
+         "use": "scenarios",
+         "transient": True,
+         "distribution": "triangular",
+         "minimum": -0.50,
+         "maximum": 1.00,
+     },
     "EBIKE_SHARE": {  # Final e-bike fraction; starts from the known baseline share.
         "category": "transport_modelling",
         "use": "scenarios",
