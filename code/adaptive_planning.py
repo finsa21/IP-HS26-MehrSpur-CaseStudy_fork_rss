@@ -117,11 +117,11 @@ PLAN_DEFINITIONS = {
         "initial_packages": [], "stations": None, "tunnel": None,
     },
     "static1": {
-        "name": "Static 1",
+        "name": "Static 1", # only Stage 1 – Bike Highway Zürich Altstetten–Schlieren from begining till end
         "initial_packages": ["stations"], "stations": None, "tunnel": None,
     },
     "static2": {
-        "name": "Static 2",
+        "name": "Static 2", # Stage 1 and 2 from beginning till end
         "initial_packages": ["stations", "tunnel"], "stations": None, "tunnel": None,
     },
     "staged1": {
