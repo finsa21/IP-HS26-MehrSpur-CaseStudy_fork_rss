@@ -1,0 +1,2611 @@
+{
+  "format_version": 3,
+  "emulator_kind": "pooled_od_delay_gp",
+  "method": "Pooled one-hot ARD Mat\u00e9rn-5/2 GP of full directional OD delays; no PCA",
+  "artifact_file": "od_emulator.joblib",
+  "input_names": [
+    "PASSENGER_DEMAND_GROWTH",
+    "PT_ASC_SHIFT",
+    "BIKE_ASC_SHIFT",
+    "EBIKE_SHARE",
+    "ROAD_FREIGHT_GROWTH"
+  ],
+  "input_domain": {
+    "PASSENGER_DEMAND_GROWTH": {
+      "minimum": -0.2,
+      "maximum": 0.5,
+      "nominal": 0.0
+    },
+    "PT_ASC_SHIFT": {
+      "minimum": -0.1,
+      "maximum": 0.3,
+      "nominal": 0.0
+    },
+    "BIKE_ASC_SHIFT": {
+      "minimum": -0.5,
+      "maximum": 1.0,
+      "nominal": 0.0
+    },
+    "EBIKE_SHARE": {
+      "minimum": 0.35,
+      "maximum": 0.8,
+      "nominal": 0.35
+    },
+    "ROAD_FREIGHT_GROWTH": {
+      "minimum": -0.05451161530839066,
+      "maximum": 0.25451161530839067,
+      "nominal": 0.0
+    }
+  },
+  "stages": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "od_labels": [
+    "24301001",
+    "24301002",
+    "24301003",
+    "24301004",
+    "24301005",
+    "24301006",
+    "24301007",
+    "24301008",
+    "24301009",
+    "24301010",
+    "24301011",
+    "24301012",
+    "24301013",
+    "24301014",
+    "24301015",
+    "24301016",
+    "24301017",
+    "24301018",
+    "24301019",
+    "24301020",
+    "24301021",
+    "24301022",
+    "24301023",
+    "24301024",
+    "24301025",
+    "24301026",
+    "24301027",
+    "24401001",
+    "24401002",
+    "24401003",
+    "24401004",
+    "24401005",
+    "24501001",
+    "24501002",
+    "24501003",
+    "24501004",
+    "24601001",
+    "24601002",
+    "24701001",
+    "24701002",
+    "24701003",
+    "24701004",
+    "24701005",
+    "24701006",
+    "24701007",
+    "24701008",
+    "24701009",
+    "24701010",
+    "24701011",
+    "24701012",
+    "24701013",
+    "24701014",
+    "24701015",
+    "24701016",
+    "24701017",
+    "24701018",
+    "24701019",
+    "24701020",
+    "24901001",
+    "24901002",
+    "24901003",
+    "25001001",
+    "25001002",
+    "25001003",
+    "25001004",
+    "25001005",
+    "25001006",
+    "25001007",
+    "25001008",
+    "25001009",
+    "25101001",
+    "25101002",
+    "25101003",
+    "25101004",
+    "26101001",
+    "26101003",
+    "26101005",
+    "26101007",
+    "26101008",
+    "26101011",
+    "26101012",
+    "9601012",
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07",
+    "G08",
+    "G09",
+    "G10",
+    "G11",
+    "G12",
+    "G13",
+    "G14",
+    "G15",
+    "G16",
+    "G17",
+    "G18",
+    "G19",
+    "G20",
+    "G21",
+    "G22",
+    "G23",
+    "G24"
+  ],
+  "od_labels_hash": "ffc4234c44b1818e6b6a",
+  "n_train_total": 100,
+  "n_validation_total": 20,
+  "adaptive_fill_in": {
+    "enabled": false,
+    "max_points": 20,
+    "batch_size": 4,
+    "targets": {
+      "weighted_rmse_min": 0.2
+    },
+    "points_added": 0,
+    "final_holdout_metrics": {
+      "weighted_rmse_min": 4.71377418134431
+    },
+    "target_reached": false
+  },
+  "training_record_ids": [
+    "train_000",
+    "train_001",
+    "train_002",
+    "train_003",
+    "train_004",
+    "train_005",
+    "train_006",
+    "train_007",
+    "train_008",
+    "train_009",
+    "train_010",
+    "train_011",
+    "train_012",
+    "train_013",
+    "train_014",
+    "train_015",
+    "train_016",
+    "train_017",
+    "train_018",
+    "train_019",
+    "train_020",
+    "train_021",
+    "train_022",
+    "train_023",
+    "train_024",
+    "train_025",
+    "train_026",
+    "train_027",
+    "train_028",
+    "train_029",
+    "train_030",
+    "train_031",
+    "train_032",
+    "train_033",
+    "train_034",
+    "train_035",
+    "train_036",
+    "train_037",
+    "train_038",
+    "train_039",
+    "train_040",
+    "train_041",
+    "train_042",
+    "train_043",
+    "train_044",
+    "train_045",
+    "train_046",
+    "train_047",
+    "train_048",
+    "train_049",
+    "train_050",
+    "train_051",
+    "train_052",
+    "train_053",
+    "train_054",
+    "train_055",
+    "train_056",
+    "train_057",
+    "train_058",
+    "train_059",
+    "train_060",
+    "train_061",
+    "train_062",
+    "train_063",
+    "train_064",
+    "train_065",
+    "train_066",
+    "train_067",
+    "train_068",
+    "train_069",
+    "train_070",
+    "train_071",
+    "train_072",
+    "train_073",
+    "train_074",
+    "train_075",
+    "train_076",
+    "train_077",
+    "train_078",
+    "train_079",
+    "train_080",
+    "train_081",
+    "train_082",
+    "train_083",
+    "train_084",
+    "train_085",
+    "train_086",
+    "train_087",
+    "train_088",
+    "train_089",
+    "train_090",
+    "train_091",
+    "train_092",
+    "train_093",
+    "train_094",
+    "train_095",
+    "train_096",
+    "train_097",
+    "train_098",
+    "train_099"
+  ],
+  "validation_record_ids": [
+    "test_000_stage0",
+    "test_000_stage1",
+    "test_000_stage2",
+    "test_000_stage3",
+    "test_001_stage0",
+    "test_001_stage1",
+    "test_001_stage2",
+    "test_001_stage3",
+    "test_002_stage0",
+    "test_002_stage1",
+    "test_002_stage2",
+    "test_002_stage3",
+    "test_003_stage0",
+    "test_003_stage1",
+    "test_003_stage2",
+    "test_003_stage3",
+    "test_004_stage0",
+    "test_004_stage1",
+    "test_004_stage2",
+    "test_004_stage3"
+  ],
+  "design_sha256": "85c3aaa3ebf7184c058008d6bb48a300132848590912fd78d5d88ddb0d9e612b",
+  "training_counts_by_stage": {
+    "0": 25,
+    "1": 25,
+    "2": 25,
+    "3": 25
+  },
+  "seed": 42,
+  "design": "continuous LHS with balanced stage labels; independent paired-stage LHS holdout",
+  "model_fingerprint": "91bf0bdf2b532d5ffb7c",
+  "cache_namespace": "ed19677db09a975648a8",
+  "portable_model_inputs": {
+    "identity_version": 3,
+    "corridor": {
+      "mode": "municipalities",
+      "municipalities": [
+        "Dietikon",
+        "Geroldswil",
+        "Oberengstringen",
+        "Oetwil an der Limmat",
+        "Schlieren",
+        "Unterengstringen",
+        "Urdorf",
+        "Weiningen (ZH)"
+      ],
+      "zone_ids": []
+    },
+    "stages": {
+      "0": {
+        "section_time_saving_min": 0.0,
+        "ebike_share": 0.35,
+        "EBIKE_SPEED_MULTIPLIER": 1.35
+      },
+      "1": {
+        "section_time_saving_min": 0.0,
+        "ebike_share": 0.35,
+        "EBIKE_SPEED_MULTIPLIER": 1.35,
+        "bike_highways": [
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "city_quartier": "Altstetten"
+                },
+                "destination": {
+                  "municipality_name": "Schlieren"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "speed_increase_pct": 54.0,
+              "distance_reduction_pct": 0.0
+            }
+          },
+          {
+            "effects": {
+              "speed_increase_pct": 27.0
+            },
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Z\u00fcrich"
+                },
+                "destination": {
+                  "municipality_name": "Urdorf"
+                }
+              }
+            ],
+            "both_directions": true
+          }
+        ],
+        "railway_expansions": [
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Schlieren"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Dietikon"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Dietikon"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oetwil an der Limmat"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oetwil an der Limmat"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oetwil an der Limmat"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "travel_time_reduction_pct": 0.0,
+              "speed_increase_pct": 0.0,
+              "distance_reduction_pct": 0.0,
+              "initial_wait_reduction_pct": 0.0,
+              "transfer_wait_reduction_pct": 0.0,
+              "transfer_time_reduction_pct": 0.0,
+              "access_time_reduction_pct": 0.0,
+              "egress_time_reduction_pct": 0.0
+            }
+          }
+        ]
+      },
+      "2": {
+        "section_time_saving_min": 0.0,
+        "ebike_share": 0.35,
+        "EBIKE_SPEED_MULTIPLIER": 1.35,
+        "bike_highways": [
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Dietikon"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "speed_increase_pct": 54.0,
+              "distance_reduction_pct": 0.0
+            }
+          }
+        ],
+        "railway_expansions": [
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Schlieren"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Dietikon"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Dietikon"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oetwil an der Limmat"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oetwil an der Limmat"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oetwil an der Limmat"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "travel_time_reduction_pct": 0.0,
+              "speed_increase_pct": 0.0,
+              "distance_reduction_pct": 0.0,
+              "initial_wait_reduction_pct": 0.0,
+              "transfer_wait_reduction_pct": 0.0,
+              "transfer_time_reduction_pct": 0.0,
+              "access_time_reduction_pct": 0.0,
+              "egress_time_reduction_pct": 0.0
+            }
+          }
+        ]
+      },
+      "3": {
+        "section_time_saving_min": 0.0,
+        "ebike_share": 0.35,
+        "EBIKE_SPEED_MULTIPLIER": 1.35,
+        "bike_highways": [
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "city_quartier": "Altstetten"
+                },
+                "destination": {
+                  "municipality_name": "Schlieren"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "speed_increase_pct": 54.0,
+              "distance_reduction_pct": 0.0
+            }
+          },
+          {
+            "effects": {
+              "speed_increase_pct": 27.0
+            },
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Z\u00fcrich"
+                },
+                "destination": {
+                  "municipality_name": "Urdorf"
+                }
+              }
+            ],
+            "both_directions": true
+          },
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Dietikon"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "speed_increase_pct": 54.0,
+              "distance_reduction_pct": 0.0
+            }
+          },
+          {
+            "effects": {
+              "speed_increase_pct": 32.0
+            },
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              }
+            ],
+            "both_directions": true
+          },
+          {
+            "effects": {
+              "speed_increase_pct": 40.0
+            },
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              }
+            ],
+            "both_directions": true
+          },
+          {
+            "effects": {
+              "speed_increase_pct": 31.0
+            },
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Oberengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Dietikon"
+                }
+              }
+            ],
+            "both_directions": true
+          }
+        ],
+        "railway_expansions": [
+          {
+            "area_pairs": [
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Schlieren"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Dietikon"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Urdorf"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Dietikon"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Schlieren"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Dietikon"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Geroldswil"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oetwil an der Limmat"
+                },
+                "destination": {
+                  "municipality_name": "Weiningen (ZH)"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oetwil an der Limmat"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Oetwil an der Limmat"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Weiningen (ZH)"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              },
+              {
+                "origin": {
+                  "municipality_name": "Unterengstringen"
+                },
+                "destination": {
+                  "municipality_name": "Oberengstringen"
+                }
+              }
+            ],
+            "both_directions": true,
+            "effects": {
+              "travel_time_reduction_pct": 0.0,
+              "speed_increase_pct": 0.0,
+              "distance_reduction_pct": 0.0,
+              "initial_wait_reduction_pct": 0.0,
+              "transfer_wait_reduction_pct": 0.0,
+              "transfer_time_reduction_pct": 0.0,
+              "access_time_reduction_pct": 0.0,
+              "egress_time_reduction_pct": 0.0
+            }
+          }
+        ]
+      }
+    },
+    "section_signatures": {
+      "0": "abd5db9c520276a40bc85edaadb206f96f0a09844ca6eb0e85a5c31d4f10e4a1",
+      "1": "abd5db9c520276a40bc85edaadb206f96f0a09844ca6eb0e85a5c31d4f10e4a1",
+      "2": "abd5db9c520276a40bc85edaadb206f96f0a09844ca6eb0e85a5c31d4f10e4a1",
+      "3": "abd5db9c520276a40bc85edaadb206f96f0a09844ca6eb0e85a5c31d4f10e4a1"
+    },
+    "input_domain": {
+      "PASSENGER_DEMAND_GROWTH": {
+        "minimum": -0.2,
+        "maximum": 0.5,
+        "nominal": 0.0
+      },
+      "PT_ASC_SHIFT": {
+        "minimum": -0.1,
+        "maximum": 0.3,
+        "nominal": 0.0
+      },
+      "BIKE_ASC_SHIFT": {
+        "minimum": -0.5,
+        "maximum": 1.0,
+        "nominal": 0.0
+      },
+      "EBIKE_SHARE": {
+        "minimum": 0.35,
+        "maximum": 0.8,
+        "nominal": 0.35
+      },
+      "ROAD_FREIGHT_GROWTH": {
+        "minimum": -0.05451161530839066,
+        "maximum": 0.25451161530839067,
+        "nominal": 0.0
+      }
+    },
+    "drive_occupancy": 1.14,
+    "prepared_inputs": {
+      "data/transport/config/mode_choice.json": "b099f6dbfe7c3f2b0f72868ccb0598a0a4b7653ea34cf37a85e1ad1111f13d85",
+      "data/transport/prepared/zones.parquet": "86696f4eed8fb24a1cd8011c332f0ed6a868d65013cddfcf13930b3e11ccd623",
+      "data/transport/prepared/demand.pkl.gz": "c7fa90c312ecad089b5b7ff21d36363283b4c9f2c72fdda7af67d1efd0708994",
+      "data/transport/prepared/skims.pkl.gz": "8c6e321818f13afe85cce069b7df002db2f1c74d33764fda4c175fc689b8d7bf",
+      "data/transport/prepared/assignment_network.pkl": "26cbf5ab36717fedd1d071e1b0be5576415b24a5e64ff976efb959ecaef72d31",
+      "data/transport/prepared/lookups.pkl.gz": "8a571b706449c87a41c58a9fd48b34e0fd6a72cf7f825c69db1eb3a8b6bcd73d",
+      "data/processed/cycling_limmattal_detailed_network.pkl": "445c5bbe6dd43894fa347a5c821ac30e2ab1924944447a59139e1a2de5efc3d6"
+    }
+  },
+  "reference_equations": {
+    "code/transport_model_interface.py:_corridor_shortest_time_table": "35336b26fbbc94b8b970c35160c3eb6fa2c63177c73be6a813187749ca38a533",
+    "code/transport_model_interface.py:_sparse_shortest_path_inputs": "137f477a654037df98ce5ca3bbbc0386becf23f84af25328898aea85c9e940c7",
+    "code/transport_model_interface.py:_bpr_link_times": "0ab54cdbfbc413a0c37290f60fa5dd7783f742520f3be37edd66ed3407612f2f",
+    "code/transport_model_interface.py:collapse_od_to_gates": "ad8c543fd63e5f6bd58d4eee926d5ecd17aebdb38e8f9b054c21db4e521c7609",
+    "code/transport_model_interface.py:CorridorContext": "4890f3f6bafc40c34e1fad51a873ac5d5de11f3ac51f2576ce2417a85e9f4612",
+    "code/transport_model_interface.py:TransportContext": "80530b81ffbf12ec8631e7156530659dc46e03d7251a709a185827ef13929ffa",
+    "code/transport_model_interface.py:DEFAULT_PASSTHROUGH_FRACTION": "48107cfe7237c6d213451d7833ce0ab8102b70c833493bdeca4f4f5a82d91711",
+    "code/transport_model_interface.py:run_coupled_corridor_assignment": "2ff21519f30a723141bc0068ab0a08d3a3f0b127443adfe2e69ebc9a502ea400",
+    "code/transport_model_interface.py:gate_totals": "f8a66350729fd663e4662c9edd199f9d3d3c787482fd6ee6a84e248e1e9ea326",
+    "code/transport_model_interface.py:_corridor_mode_summary": "443d47429a76bbfb868eada887127dd62010c074afaf0a6e3323278defe3a838",
+    "code/transport_model_interface.py:_synthetic_assignment_background": "cc7532e294b8724459a1a0d70553c1d0cfa202521d05ae8af4a52170dad3c2f3",
+    "code/transport_model_interface.py:_project_corridor_delay_to_full_od": "08d0d14eacebfe2d87ef130d1fcf0befc1f4323adffa46384adc9b04630b0f9a",
+    "code/transport_model_interface.py:_all_or_nothing_sparse": "eb46f5da329080fce594c83ccc204ec525e3f23a294da3a41957aa85164b5559",
+    "code/transport_model_interface.py:AssignmentResult": "56d2481127764b2a4fdc27843325237f2f848cb475f9e641779ce9930bcbdb7b",
+    "code/transport_model_interface.py:ModeChoiceResult": "c6e4c1dc2259fa1409b8bcbfad6ba88eb0f45e7b99e67cce08c388588d9bb700",
+    "code/transport_model_interface.py:_report_unserved_road_demand": "79fb146415520fc22ea83b4aff24321067093021a8a5ab016ecf4505fc73775c",
+    "code/transport_model_interface.py:resolve_assignment_settings": "4fad46305924815e12d3c6f9a8dea630b062ea3e4b9d11a78c86b14429b448d6",
+    "code/transport_model_interface.py:run_transport_mode_choice": "f50a251a2162187629027d13b29a6d01219106624a4f54c63943bb019897a80d",
+    "code/transport_model_interface.py:apply_road_capacity_stage": "72bab627fc2b76188b757ab5989c36efa0815c697ad96deab57e99fd7ab73510",
+    "code/transport_model_interface.py:_road_change_columns": "72fef994e8897dd6d61f5e71af4119623600735fe72dbd88d36b8ca7e04f1823",
+    "code/transport_model_interface.py:_prepare_road_edges": "47ddea68175ff334d8d11b1b6b57906fdbaccffe4451a6ffd90e72e4e5199b87",
+    "code/transport_model_interface.py:build_corridor_context": "ea57e230732b37e84260c45b52c5139db0217a601723b67ff606ef571c9d4880",
+    "code/transport_model_interface.py:_select_spaced_gates": "3097bd37ec6353e712f22a35f7217ba6a962d86c72d9d7e131d8eda5e8781403",
+    "code/transport_model_interface.py:_reachable_gate_candidates": "02bae839d741d03589a61e55413ee737fc5494f5b0cd6708a4d9507c725465d2",
+    "code/transport_model_interface.py:_retain_internal_road_connections": "cbd89718f6ba69995822c8519be461b1a2f3c4be1653ce0527c7e51f8681697f",
+    "code/transport_model_interface.py:_get_core_zones": "32d8a413ab5501a1f49e7321ace40681cb4c0451667f6fde7e2a560fe39e3e14",
+    "code/transport_model_interface.py:resolve_corridor_zone_ids": "7f6110ee39dbc6affa781738723e764625d08cba418760d9c843792818d2a116",
+    "code/transport_model_interface.py:DEFAULT_GATE_SEPARATION_M": "d525993c205d38203a6d7a35dbee9bb8d8ac27193c67b6688c10a7b4eebc6aec",
+    "code/transport_model_interface.py:DEFAULT_MAX_GATES": "2675fd702424da9df6e5e64dca98f0136fb8354991335d6d7700446981e4a8fa",
+    "code/transport_model_interface.py:DEFAULT_CORRIDOR_BUFFER_M": "da12853a5516bba19d5f5363006ce409852bea9b534ef24e9602bed82d609946",
+    "code/transport_model_interface.py:load_transport_context": "7d5dfde36d8291f94d39a25b95908cc3485b411329e18b660cfea68d213cf93c",
+    "code/transport_model_interface.py:_detailed_network_file_identity": "7bb9b6e9622a64eacca60363ae01f762df865ac8ca0daab56226023828204162",
+    "code/transport_model_interface.py:_merge_detailed_road_network": "78dcca6645d5d5393600a6b970593bc5e0a148a78d7b47b90368c3b70f83b6a4",
+    "code/transport_model_interface.py:_DETAILED_NETWORK_MERGE_POLICY": "4f83a98b0e49ea42739e1d345149bf1a86150a58cc18c8ab81cf6cd71acaf8ee",
+    "code/transport_model_interface.py:_read_detailed_network": "ca3cb819a1babb72fe7b863bdf4815064836d476c941bc605a56bbab25a61bc9",
+    "code/transport_model_interface.py:_validate_detailed_network": "7e3167de7a6e1144da9734861730e874730c73366b1949f77763b807d69e1a2c",
+    "code/transport_model_interface.py:_detailed_network_scope": "5d3ccc91bed868d230a5e7e1b013a4c3b0a4c4dc0cbb519782e3d152e29ac619",
+    "code/transport_model_interface.py:_load_assignment_network": "3772521ed90913aac4d5f9f12a4e98c28f2b746e8d9ed55807adb384874e007f",
+    "code/transport_model_interface.py:context_cache_status": "c166d24df53de8f596cd434009590cc5a7dbcfa312e3dd63d829682bafa0f716",
+    "code/transport_model_interface.py:configured_input_paths": "48147f1249b0d9bec7f73d300f6b40be2554346111ec620afb4d7e094fa29b96",
+    "code/transport_model_interface.py:_import_transport_modules": "0d0e06234c91bcf411d32c5be2444bd4da0fae9d9affa58d31dad195bd4f39f1",
+    "code/transport_model_interface.py:readiness_flags": "73b7cf7741b19a7250f587208c320d10c53d5aaa4301b2d5aa7ef11fdddca8bb",
+    "code/transport_model_interface.py:transport_input_status": "2feefc4f1c2af349a8dab97595f98def3fb823eb31f7f38a9574e795a34e3c14",
+    "code/transport_model_interface.py:configured_detailed_network_path": "91fb824f27f92738746e123117e3b0c9ea8ceacdb51327d85c440ca2c1e8b079",
+    "code/additional/uncertainty.py:TRANSPORT_BINDINGS": "e29be27c81c023416ee308ff746c8d721cc232e6101792e3d90088c48963e7b1",
+    "code/additional/uncertainty.py:native_transport_inputs": "a5024d6a740482b4cd93325ec5740c5e155528fde177b42c1ccb83909f91ff2c",
+    "code/additional/uncertainty.py:complete_transport_inputs": "fee8083e1df16ae1167f60d6b684b09eee2613fcb141e6e538e24b709421cdd0",
+    "code/additional/section_flows.py:apply_section_time_saving": "5c6036f33efe9abf53109a1c4f8f7893ba60eb55122cdf022127af348c1e6321",
+    "code/additional/section_flows.py:_values": "5ecd8496e322a72c8cdfc774ac61a12cb57f6c0bac4e4b94aa43297238bc2106",
+    "code/additional/section_flows.py:section_saving_weights": "1d9a8c7f86dd6bf22d7d91a9d5542f762b41a06c3ab09ce29985470f6ed4c543",
+    "code/additional/section_flows.py:coverage_masks": "d33c1ab47869a16c8d06c746c6d8ed1dc9ffbea13ee3d50f84856c82c30b2482",
+    "code/additional/section_flows.py:_MODES": "de7a3199230af62f055db731b5cfd20469249804395856fb8ece68a786ccfda6",
+    "code/additional/section_flows.py:_coverage": "5a530303e1dbc920f34e754bc089406db4fe664b72fbd4bb8c30996bf94d34aa",
+    "code/additional/section_flows.py:_name": "1bd9de44bf00f6ff5067cb8db96e0e1935fbe8bb6c3219b9cb7bf1b27ea41996",
+    "code/additional/section_flows.py:_minimal_context": "f3d55878babccae893cabe00aa8ba7abc027882e86402d4d539d0f763090ee38",
+    "code/additional/section_flows.py:_mode": "fb489fe52eaa9ff9b8f8d60a32527ebfde71099d2e0ffc5f2066f61a1f05be26",
+    "code/additional/section_flows.py:_recipe_contract": "36f0063c2583c4324eaab9e2103ffd5a4ede5756597fcea7ebe638f7e153a042",
+    "code/additional/section_flows.py:_routing_path": "dd3cd26f384adea1f3653b2f3b232d22537f33a59007b7298e95683bc7faab7d",
+    "code/additional/section_flows.py:_ROOT": "cf6aca5137e6698eda21fd3c2c781bc7143743fe3a592ddb608c4516c6b77db1",
+    "code/additional/section_flows.py:_CODE_DIR": "770d495023aab802bcfccf37f4c928d6ce31e80a5a4d6813d1e9482226b0fe02",
+    "code/additional/section_flows.py:_digest_path": "1247b736c50e119dd665f031547666ecdb7fbbd8b2999a1940b68883ab2ac202",
+    "code/additional/section_flows.py:_file_digest": "365e540e23b8e7fafc3ac8d21dc2d2c821fd9028e2543cb62ff01eb3fd8308eb",
+    "code/additional/section_flows.py:_RECIPE_VERSION": "a786c4927daaeb9cae90979a0d5edd423485328b70b0b25c5776c14821ec49e4",
+    "code/additional/section_flows.py:_read_coverage": "344b5482e12aef81ee6d14be9e194217b44b3a58785e1a81bfd8870498dca4e6",
+    "code/additional/section_flows.py:_hash": "fbe7897d1570a7e1bfbfd177c43f7333d67f6a1a8717d2ceb35c9f2861d04b69",
+    "code/additional/section_flows.py:_prepare_recipe": "bda4d978d6daec8f9bab3c9d9b8d62b3b73bd985f509b8da59a97c064ef233e5",
+    "code/additional/section_flows.py:_no_path_time": "044f0aefb7e57d8f3949a1c1175d8363163b181b845c44f2c0bb678066bbdb7d",
+    "code/additional/section_flows.py:_station_group": "d00a2b4a4d9d1a073d7a05bbba5a71d02b74d113fec0ce170ab2aff8840ccc63",
+    "code/additional/section_flows.py:route_input_signature": "9095352c695f72b0d5b6995d07108528dc984bf72d49e7c829cad29e102f5648",
+    "code/additional/section_flows.py:_trace_features": "83261bf748896cb1b6f2c0ef4bd90c2da19744f7b824f312243bb381aff9ab22",
+    "code/additional/section_flows.py:_ancestor_sum": "d219e5b695bfcc091515dbdb6137a31530cd4d2e1aacbd12c300f1621e88bfc2",
+    "code/additional/section_flows.py:_route_inputs": "bec1d5f4f96426cbef389ad668a01fe9d32bbe1521dff6103e77f038c2749158",
+    "code/additional/section_flows.py:_path": "102d3b7f8fc18fb31d338fc8dd9faf1917cab01c21558f780ea27b281e4e45c1",
+    "code/additional/section_flows.py:_DEFAULT_COVERAGE": "0cbff2e6cff4f1e779c4b46180af870d6ef354b4f82188ec27cdede21292f72d",
+    "code/additional/section_flows.py:_ensure_recipe_coverage": "7cef10662779643512b0fba0be1cc9f5abfac6fd57ac55159e8b76edb7960e4e",
+    "code/additional/section_flows.py:section_config": "774a6309cddbcdc8120f73f25383b58dba8f0a33765b5e8350bfc38114600b64",
+    "code/additional/section_flows.py:_selector": "8339b5f5d8380ca4e57aa52c35e114220766b5dab1d3b8049bcb032251ad68a7",
+    "code/additional/section_flows.py:_INTERNAL_SECTION": "f54aabcec41d74ee788fe73e002df49ab8ed6ce98365fb6b2af4d43738164d85",
+    "code/additional/section_flows.py:_validate_route_inputs": "72a69ad3247429de1742e0ad5e14734493d48abcf76dcde1478aa188818b18fb",
+    "code/additional/section_flows.py:physical_signature": "cfa684f11987d8c8b98539b8140998e3abbe504b140b4797b3bd4c9dadad3146",
+    "code/additional/section_flows.py:_saving": "28f2fa915d5c0412c311e34dd046f6c5f4c4279dbb95b31d02332cd4d6bfcb49",
+    "code/transport_core/interventions.py:apply_interventions": "6c258742f41df402b16fe75353c1b9bf104b3362a9f44964e63914aee319932e",
+    "code/transport_core/interventions.py:_apply_mobility_hub": "91af188a65d4df848b7446a5a3382f00ffa2a62509d4b4ffc565b19ccc79b10c",
+    "code/transport_core/interventions.py:_multiply_selected": "61b2f047a7bb5108c79946829dc1d305d0a7bed171a2e56584f0a08db8f5999a",
+    "code/transport_core/interventions.py:_reduce_station_transfer": "6c2e7d3464268d479c045434d0ee4efd92c1657e1573c25a2645bcc982622423",
+    "code/transport_core/interventions.py:_reduction_factor": "e9cadd0b2c95b0b47b1504b1b6f2613a92a7946637c341d042fcfcdc04be768f",
+    "code/transport_core/interventions.py:_percentage": "d73898aba9f4c88c14326dcbd89f52285c3bb3207e57939d4a06e8b930dca88b",
+    "code/transport_core/interventions.py:_hub_mode_masks": "5f0e14e9fccd1da3fd4f3d9115dc49b6bc6ef8f6cb083eeeac75d0e747ee975a",
+    "code/transport_core/interventions.py:_hub_stop_ids": "23eabab313e46741710ca452d75cdf60068983cd02d0c9af098007bced821fcb",
+    "code/transport_core/interventions.py:_hub_zone_ids": "19d3264c6aa9512a989dae7775c583ac90764cc7b5df827c341fc6370a0cae7a",
+    "code/transport_core/interventions.py:_selector_zone_ids": "7980adc36156794782aed8df3834a12b9494801247b9c9bee5ec04d8e36f1846",
+    "code/transport_core/interventions.py:_speed_factor": "07a44caedf67e0e8d3c67addbbb4f70c149ad53c081c1275485af4a386d4c9ea",
+    "code/transport_core/interventions.py:station_transfer_walk_minutes": "85e8068b62a874f18b6d49c957009dad2101d43f0207b190f28ed1c5b0ae1ab2",
+    "code/transport_core/interventions.py:_railway_expansion_mask": "5a2a37f528a7db237369d3cf68e39417e2a1cc02fc4382046aae2349d76a53a5",
+    "code/transport_core/interventions.py:_od_mask": "e7f59309a47c13effbfd906adade3cd201a10bda2152b615d4b6dd69cb5dc5e8",
+    "code/transport_core/interventions.py:_as_list": "5b66d0105722c8fd4cecfd020241d235b18e8258836cda2606510829c058e254",
+    "code/transport_core/interventions.py:_apply_railway_expansion": "2d80edec14f28b82ca64bfe164828f2090b0e31f3b4a4773bd349b2fd61bf328",
+    "code/transport_core/interventions.py:_apply_bike_highway": "46d6c4487f8ea2d8f4be380e9ae39d5e00039abfb4131bd09bf355d778ff7cad",
+    "code/transport_core/interventions.py:_bike_highway_mask": "42fba334ee71508d0b71356a660c95c4ebcb3f16cc0c694d17b8ba04a89ba587",
+    "code/transport_core/mode_choice_zurich.py:mode_split_aggregated": "39740dfec6610d700022825fa26bc7df4e23fd921644504f53920e1f2e7322b9",
+    "code/transport_core/mode_choice_zurich.py:UNAVAILABLE_UTILITY": "cf607803da6a985966cf4c2ea3b127db7f605c7e6a149527e92c7ecc9b3d36c5",
+    "code/transport_core/mode_choice_zurich.py:_matrix": "57dc83eb9c08d84e5c067cfdb3749012164060b9c93cdd461d9d7b7183ab00b1",
+    "code/transport_core/mode_choice_zurich.py:load_mode_choice_parameters": "1954ce4e9752eff79cbffaf35710d5d714118c420c59d1796071d9ed1383da1d",
+    "code/transport_core/mode_choice_zurich.py:_availability": "94a468b5ae10f41e5887bd7ee156ab1752f5e5942d8e887d92947493d6e8337a",
+    "code/transport_core/travel_times.py:rebuild_pt_out_of_vehicle_times": "8fcd9b866f27eb8136c207a96e1ab35a7e49d027fb2b47e274409f9a70a1b3f3",
+    "code/transport_core/travel_times.py:standalone_walk_mask": "d7735f72360d69b5bb0d7ed9a25822ca1aae4aab818888b6b17ced91bcf84b2c",
+    "code/transport_core/travel_times.py:apply_ebike_share": "8a90180b70b6580b1ee9a846a3678886d30cab825dee9552def2e49491f3054d",
+    "code/transport_core/travel_times.py:_valid": "a303d1441d1e9388073ac5e6c9be62213e0654a12a87574ba1b0313ee4d81a55",
+    "code/transport_core/travel_times.py:ebike_time_factor": "5a224a3cc955488f7c0f08892fcb233614344057540aa161a3a8d59728ac2ba1",
+    "code/transport_core/travel_times.py:apply_perceived_time_policies": "d9b0cf13a242d84cac666d0aede0b36b313586074f3ebe9ad49a09983c128a3a",
+    "code/transport_core/travel_times.py:_apply_pt_component_floors": "0e8812bfe109e9ecae2728c70f5c15a9c96f4529ba6b06d029e3b3d8c78ef520",
+    "code/transport_core/travel_times.py:_apply_drive_perceived_times": "865e5ce0bb682aa6131a1f00c3da691a1efa42c7d24fce7628627d6c0f7eb683",
+    "code/transport_core/travel_times.py:load_travel_times": "07b30a5688c7523ea98bc9e845a4f6b1ed0bdde1baca8d2f9b98b54b944c0ae7",
+    "code/transport_core/travel_times.py:STRING_SKIMS": "82bc265c8c9ba871ec6316664733231c2d1ab4540bff8e2cc3ae06aa7b69602d",
+    "code/transport_core/travel_times.py:LENGTH_SKIMS": "394dd3a769c5516156dc01cf5c8c99d0fea6ebdab25c45b99ee180ce4c58bed0",
+    "code/transport_core/travel_times.py:NUMERIC_SKIMS": "aca88426b2b2b21e64c32a93fef548abb5f76064cdc63fbe2abee96014e7f501",
+    "code/transport_core/input_packages.py:align_matrix": "76dbbf55971153e022d13a521cb78cf551b19da71a5f6fec86880b21aee9437d",
+    "code/transport_core/input_packages.py:load_package": "5f31d2c5c671de6e12e522141674762acd59ab91c2d69a3bcf2982aca55acbea",
+    "code/transport_core/input_packages.py:PACKAGE_VERSION": "c8ecf5522fe2e582aad4ce39f2e1e86393b302ec27c730debacca131719facec",
+    "code/transport_core/zoning.py:load_model_inputs": "9808b7f189d676aa3d78b14c242c5fb19d391df089e7da4c44d472935f0e9d9b",
+    "code/transport_core/zoning.py:load_od_table": "0b7485fef5fa3225656200fe9c7c83420518175af29ee11d4f0cb01d84244d4c",
+    "code/transport_core/zoning.py:load_zones": "e4ff2f6dc374b15d729e038ac3dd8a7bbf1f687236f448378e554a49d1f79dcc",
+    "code/transport_core/zoning.py:REQUIRED_ZONE_COLUMNS": "6c0996518ec604b212065acccbaabc2dcb99a70aa2de591bb7e876d426e457b9",
+    "code/transport_core/config.py:EBIKE_SPEED_MULTIPLIER": "dae0a3ec813244e77b789467df96d6f2e0d6f7c16f717a18306789eda7898e35",
+    "code/transport_core/config.py:PT_TRANSFER_PHYSICAL_FLOOR_MIN": "891fb690d8fa21cd3f8b644b4a640272b5b7a343e9bc51dc4fb5a0d71ee7449c",
+    "code/transport_core/config.py:PT_EGRESS_FLOOR_MIN": "d11da43ce124d295c5319f6a1684c132d777a858ddefefd264d93d44925e26bd",
+    "code/transport_core/config.py:PT_ACCESS_FLOOR_MIN": "79b75ae5254b1e3364b913f7bf47cff814ed4d737f7b1949f5b131130a5daeb0",
+    "code/transport_core/config.py:PT_INTRAZONAL_MIN": "9784a2a2e5d1e650ee513facf2cf97835f6eff8e6fb2cf5a210c90d7d8c92f7c",
+    "code/transport_core/config.py:DRIVE_INTRAZONAL_MIN": "e8b7513fbd7e4bb009aaffe8b5fea9caf28cb3c53259f4e32b6e7bd4d93edb15",
+    "code/transport_core/config.py:CAR_TERMINAL_CANTON_MIN": "7fe6cc51ce7a7f1236f2857ee88069124531d676746793d3680f35add68d1709",
+    "code/transport_core/config.py:CAR_TERMINAL_CITY_MIN": "1b77d172d496339efc2e17351c351f6cc49c4ac09be6009437d88e0f6f9d0ea6",
+    "code/transport_core/config.py:DRIVE_CONNECTOR_CANTON_MIN": "ef4c062c2ae29db9269421fb6413a96305528df72b178922f57b3142c9478abd",
+    "code/transport_core/config.py:DRIVE_CONNECTOR_CITY_MIN": "00c22847a1f79cffedecae3f49d4e7163a5fbdd7894b638bb37e1b4c5665b7b7",
+    "code/transport_core/config.py:EXTERNAL_BACKGROUND_CANTON_FACTOR": "27b0704fc392a277ccba62e6c6646fd5845cf50889a2149736147ac248cb8543",
+    "code/transport_core/config.py:EXTERNAL_BACKGROUND_CITY_FACTOR": "83c01584df0c620435ed995a2af1f2c9fb3bef0aaa26a831a66a607d4ffdd0d1",
+    "code/transport_core/config.py:MAX_WALK_DISTANCE_KM": "238ac3760cb98234fe768907e7e7d99bf6b16d8126aff5f25f548a685d648ea6",
+    "code/transport_core/config.py:NO_PATH_TIME_MIN": "942afa32d696e2c8a76eee2b169778cb9314019c9785972617ce9a88cc96c263",
+    "code/transport_core/config.py:MODE_ORDER": "2da0be188cb14dc5749a7bf3516a887cd68e34d296c87e8c4294073605d35edd",
+    "code/transport_core/config.py:MODE_CHOICE_FILE": "b45669feb78764b43d7cd0ee193524b3f96c6bbf6969c44ed9d86cce7f2c652e",
+    "code/transport_core/config.py:CONFIG_DIR": "8a6f624a109282a3149dd66c40f6bfa4941bbc0c0ac2c309cdeffacefb0a09e8",
+    "code/transport_core/config.py:INPUT_DIR": "edebd47019ec5ddad464a4923968789d37d24014a4924265b62666547638ad48",
+    "code/transport_core/config.py:ROOT": "2bef70ceee57a55974079bf60e7106a8f67a3d9c19fb3e191d569ce146bbf9b5",
+    "code/transport_core/config.py:LOOKUP_PACKAGE_FILE": "7260b956d28d3fce830bcf3e0775c78153a768834fe6adfea7e3115e10f2b5fc",
+    "code/transport_core/config.py:PREPARED_DIR": "973b0b92d7f22416f6dc3a6fc56fd1523204a537106866643c3b5924e5772ae5",
+    "code/transport_core/config.py:SKIM_PACKAGE_FILE": "b508870e31b5400e8090b1d5dc0314a8fc311ae04df2a2a2db3f3343576ad932",
+    "code/transport_core/config.py:DEMAND_PACKAGE_FILE": "c59bfec7af3e43024603d2915fd9bd663d9c97fc8da34a0ff56b6596ca674cb7",
+    "code/transport_core/config.py:ZONES_FILE": "75fed50e7affacbf9b812923291434b77b018850a124b5b6c97786b8bc44d515"
+  },
+  "cache_contract": {
+    "format_version": 3,
+    "model_fingerprint": "91bf0bdf2b532d5ffb7c",
+    "reference_equations": "19783b770214fd1a0541",
+    "solver_settings": {
+      "stopping_rule": "road_relative_gap",
+      "min_iterations": 8,
+      "max_iterations": 64,
+      "check_every": 4,
+      "road_gap_threshold": 0.02,
+      "od_threshold": 0.0,
+      "drive_occupancy": 1.14
+    },
+    "route_loader": "native_predecessor_tree",
+    "target": "directional_internal_zone_gate_od_delay_minutes"
+  },
+  "training_solver_settings": {
+    "stopping_rule": "road_relative_gap",
+    "min_iterations": 8,
+    "max_iterations": 64,
+    "check_every": 4,
+    "road_gap_threshold": 0.02,
+    "od_threshold": 0.0,
+    "drive_occupancy": 1.14
+  },
+  "source_fingerprint": "d2d7d3912c157b514b49",
+  "source_convergence_passed": true,
+  "gp_diagnostics": {
+    "mode": "pooled",
+    "stage_counts": {
+      "0": 25,
+      "1": 25,
+      "2": 25,
+      "3": 25
+    },
+    "feature_encoding": "5 continuous + 4 one-hot",
+    "models": {
+      "pooled": {
+        "n_simulations": 100,
+        "n_features": 9,
+        "n_outputs": 11236,
+        "n_varying_outputs": 10809,
+        "n_constant_outputs": 427,
+        "output_scale_floor_minutes": 0.01,
+        "standardize_outputs": true,
+        "kernel_family": "matern52",
+        "target_reduction": "none; exact Gram likelihood identity",
+        "prediction_storage": "original training targets; exact posterior identity",
+        "stored_target_dtype": "float32",
+        "kernel": "1.14**2 * Matern(length_scale=[0.559, 4.39, 1.66, 6.22, 3.45, 10, 10, 10, 10], nu=2.5) + WhiteKernel(noise_level=0.00553)",
+        "theta": [
+          0.26836323729146616,
+          -0.5809258775622985,
+          1.4784611777466976,
+          0.5096567986989017,
+          1.828180503093103,
+          1.2375455478675272,
+          2.302585092994046,
+          2.302585092994046,
+          2.302585092994046,
+          2.302585092994046,
+          -5.197989189629109
+        ],
+        "length_scales": [
+          0.5593802091428131,
+          4.386190916870952,
+          1.6647197629047923,
+          6.2225544336319984,
+          3.4471422273013106,
+          10.000000000000002,
+          10.000000000000002,
+          10.000000000000002,
+          10.000000000000002
+        ],
+        "amplitude_variance": 1.3078221035060849,
+        "noise_variance_normalized": 0.005527668345912226,
+        "nll_per_varying_output": -38.11066697960463,
+        "selected_optimizer_success": true,
+        "optimizer_attempts": [
+          {
+            "success": true,
+            "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "iterations": 35,
+            "nll_per_output": -38.11066697960463
+          },
+          {
+            "success": true,
+            "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "iterations": 36,
+            "nll_per_output": -17.651476218725065
+          }
+        ],
+        "parameters_near_bound": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "fit_seconds": 14.464638500008732
+      }
+    },
+    "fit_seconds": 14.464638500008732
+  },
+  "validation": {
+    "od": {
+      "n_cases": 20,
+      "weighted_mae_min": 2.1465336995648023,
+      "weighted_rmse_min": 4.71377418134431,
+      "weighted_bias_min": 1.2752716307789238,
+      "maximum_case_mae_min": 10.241154764314137,
+      "weighted_95pct_latent_coverage": 0.9933912388482863,
+      "weighted_nrmse": 0.01422790789026647,
+      "maximum_case_scaled_error": 0.026739181431936324,
+      "limits": {
+        "weighted_mae_min": 0.1,
+        "weighted_rmse_min": 0.2
+      },
+      "cases": [
+        {
+          "id": "test_000_stage0",
+          "stage": 0,
+          "weighted_mae_min": 10.241154764314137,
+          "weighted_mse_min2": 186.71609612007066,
+          "weighted_rmse_min": 13.66440983431303,
+          "weighted_truth_rms_min": 511.0257346170196,
+          "scaled_error": 0.026739181431936324,
+          "weighted_bias_min": 10.240302102017775,
+          "weighted_95pct_latent_coverage": 0.9896153225115589,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_000_stage1",
+          "stage": 1,
+          "weighted_mae_min": 5.808616573445849,
+          "weighted_mse_min2": 59.91555586329057,
+          "weighted_rmse_min": 7.740513927594897,
+          "weighted_truth_rms_min": 501.19308992450107,
+          "scaled_error": 0.015444175275363264,
+          "weighted_bias_min": 5.807779312415296,
+          "weighted_95pct_latent_coverage": 0.9877697919716553,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_000_stage2",
+          "stage": 2,
+          "weighted_mae_min": 3.8967503281654245,
+          "weighted_mse_min2": 26.71123151323206,
+          "weighted_rmse_min": 5.1682909663864764,
+          "weighted_truth_rms_min": 511.01900906703133,
+          "scaled_error": 0.010113696114401376,
+          "weighted_bias_min": 3.895582120930227,
+          "weighted_95pct_latent_coverage": 0.9921072807892962,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_000_stage3",
+          "stage": 3,
+          "weighted_mae_min": 8.395443989313128,
+          "weighted_mse_min2": 125.02442616411142,
+          "weighted_rmse_min": 11.181432205406937,
+          "weighted_truth_rms_min": 501.18739819403953,
+          "scaled_error": 0.022309882981291437,
+          "weighted_bias_min": 8.394440425278704,
+          "weighted_95pct_latent_coverage": 0.9866818051890209,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_001_stage0",
+          "stage": 0,
+          "weighted_mae_min": 0.23795551240005888,
+          "weighted_mse_min2": 0.08916312393814801,
+          "weighted_rmse_min": 0.29860194898584974,
+          "weighted_truth_rms_min": 431.23463569138346,
+          "scaled_error": 0.0006924349861348953,
+          "weighted_bias_min": -0.23264441923980736,
+          "weighted_95pct_latent_coverage": 0.9960364553993952,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_001_stage1",
+          "stage": 1,
+          "weighted_mae_min": 2.0129513025809844,
+          "weighted_mse_min2": 7.128580943800093,
+          "weighted_rmse_min": 2.6699402509794283,
+          "weighted_truth_rms_min": 421.9430153077509,
+          "scaled_error": 0.006327727096115253,
+          "weighted_bias_min": -2.0128570403157173,
+          "weighted_95pct_latent_coverage": 0.9972580526296955,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_001_stage2",
+          "stage": 2,
+          "weighted_mae_min": 3.529234330213451,
+          "weighted_mse_min2": 22.238898414139555,
+          "weighted_rmse_min": 4.715813653457858,
+          "weighted_truth_rms_min": 431.269624647641,
+          "scaled_error": 0.010934722465814294,
+          "weighted_bias_min": -3.52896105089318,
+          "weighted_95pct_latent_coverage": 0.9944065662162206,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_001_stage3",
+          "stage": 3,
+          "weighted_mae_min": 1.59697728132822,
+          "weighted_mse_min2": 4.430133123595527,
+          "weighted_rmse_min": 2.10478814221183,
+          "weighted_truth_rms_min": 421.94234932387934,
+          "scaled_error": 0.004988331096853738,
+          "weighted_bias_min": -1.596408431921704,
+          "weighted_95pct_latent_coverage": 0.9900964093064951,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_002_stage0",
+          "stage": 0,
+          "weighted_mae_min": 1.392660847203059,
+          "weighted_mse_min2": 3.459609980204581,
+          "weighted_rmse_min": 1.860002682848759,
+          "weighted_truth_rms_min": 119.55944553783459,
+          "scaled_error": 0.015557137075047417,
+          "weighted_bias_min": 1.3914798532513044,
+          "weighted_95pct_latent_coverage": 0.9978110219277978,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_002_stage1",
+          "stage": 1,
+          "weighted_mae_min": 1.0926654114099212,
+          "weighted_mse_min2": 2.0748353436607507,
+          "weighted_rmse_min": 1.4404288749052314,
+          "weighted_truth_rms_min": 117.31966048047575,
+          "scaled_error": 0.012277813190099936,
+          "weighted_bias_min": 1.0919448612604268,
+          "weighted_95pct_latent_coverage": 0.9984626727606876,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_002_stage2",
+          "stage": 2,
+          "weighted_mae_min": 0.4185739478571778,
+          "weighted_mse_min2": 0.34266975945212846,
+          "weighted_rmse_min": 0.5853800128567156,
+          "weighted_truth_rms_min": 119.5561632814079,
+          "scaled_error": 0.004896276333984261,
+          "weighted_bias_min": -0.4171696062304012,
+          "weighted_95pct_latent_coverage": 0.9971505643994584,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_002_stage3",
+          "stage": 3,
+          "weighted_mae_min": 0.8980043404035409,
+          "weighted_mse_min2": 1.455373021320221,
+          "weighted_rmse_min": 1.2063884205844406,
+          "weighted_truth_rms_min": 117.3044687990138,
+          "scaled_error": 0.010284249465819012,
+          "weighted_bias_min": -0.8979043844413682,
+          "weighted_95pct_latent_coverage": 0.9977123366924763,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_003_stage0",
+          "stage": 0,
+          "weighted_mae_min": 0.2302445225030209,
+          "weighted_mse_min2": 0.10198591055361593,
+          "weighted_rmse_min": 0.31935232980771555,
+          "weighted_truth_rms_min": 259.5432463286263,
+          "scaled_error": 0.0012304397603294238,
+          "weighted_bias_min": 0.22594455325832796,
+          "weighted_95pct_latent_coverage": 0.9934036100579957,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_003_stage1",
+          "stage": 1,
+          "weighted_mae_min": 0.10418241376402344,
+          "weighted_mse_min2": 0.018093333125490576,
+          "weighted_rmse_min": 0.13451146094474842,
+          "weighted_truth_rms_min": 252.642313323863,
+          "scaled_error": 0.0005324185769796912,
+          "weighted_bias_min": 0.10072869016106636,
+          "weighted_95pct_latent_coverage": 0.9880542763567812,
+          "negative_prediction_fraction_weighted": 9.843471721611457e-05
+        },
+        {
+          "id": "test_003_stage2",
+          "stage": 2,
+          "weighted_mae_min": 0.4964671640876841,
+          "weighted_mse_min2": 0.4510414602829908,
+          "weighted_rmse_min": 0.6715962032970338,
+          "weighted_truth_rms_min": 259.5387786555295,
+          "scaled_error": 0.0025876526304703155,
+          "weighted_bias_min": 0.4935876364973077,
+          "weighted_95pct_latent_coverage": 0.991499138890634,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_003_stage3",
+          "stage": 3,
+          "weighted_mae_min": 0.11974283252941229,
+          "weighted_mse_min2": 0.025854151190371065,
+          "weighted_rmse_min": 0.16079226097785634,
+          "weighted_truth_rms_min": 252.63741453466767,
+          "scaled_error": 0.000636454664777263,
+          "weighted_bias_min": 0.11696561455538035,
+          "weighted_95pct_latent_coverage": 0.9922266901789684,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_004_stage0",
+          "stage": 0,
+          "weighted_mae_min": 1.0680564122724445,
+          "weighted_mse_min2": 2.0853479443897385,
+          "weighted_rmse_min": 1.444073386081794,
+          "weighted_truth_rms_min": 178.09097619338402,
+          "scaled_error": 0.008108627494487508,
+          "weighted_bias_min": 1.0677041831065388,
+          "weighted_95pct_latent_coverage": 0.9935008216310431,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_004_stage1",
+          "stage": 1,
+          "weighted_mae_min": 1.019172341304906,
+          "weighted_mse_min2": 1.89504002898539,
+          "weighted_rmse_min": 1.3766045288990554,
+          "weighted_truth_rms_min": 174.12503336006145,
+          "scaled_error": 0.007905839283042476,
+          "weighted_bias_min": 1.0183933033976018,
+          "weighted_95pct_latent_coverage": 0.9939764241089091,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_004_stage2",
+          "stage": 2,
+          "weighted_mae_min": 0.030315287768377,
+          "weighted_mse_min2": 0.0012132118994868304,
+          "weighted_rmse_min": 0.0348311914738332,
+          "weighted_truth_rms_min": 178.0864281383535,
+          "scaled_error": 0.00019558588398871813,
+          "weighted_bias_min": 0.006441286533044612,
+          "weighted_95pct_latent_coverage": 0.9972307741067138,
+          "negative_prediction_fraction_weighted": 0.0
+        },
+        {
+          "id": "test_004_stage3",
+          "stage": 3,
+          "weighted_mae_min": 0.34150438843122205,
+          "weighted_mse_min2": 0.22819124292164114,
+          "weighted_rmse_min": 0.47769367058988876,
+          "weighted_truth_rms_min": 174.1216667051901,
+          "scaled_error": 0.0027434476112538266,
+          "weighted_bias_min": 0.3400836059576562,
+          "weighted_95pct_latent_coverage": 0.9928247618409235,
+          "negative_prediction_fraction_weighted": 0.0
+        }
+      ],
+      "by_stage": {
+        "0": {
+          "n_cases": 5,
+          "weighted_mae_min": 2.6340144117385442,
+          "weighted_rmse_min": 6.20406645804438,
+          "weighted_bias_min": 2.5385572544788277,
+          "maximum_case_mae_min": 10.241154764314137,
+          "weighted_95pct_latent_coverage": 0.9940734463055583
+        },
+        "1": {
+          "n_cases": 5,
+          "weighted_mae_min": 2.0075176085011366,
+          "weighted_rmse_min": 3.76914063183804,
+          "weighted_bias_min": 1.2011978253837348,
+          "maximum_case_mae_min": 5.808616573445849,
+          "weighted_95pct_latent_coverage": 0.9931042435655456
+        },
+        "2": {
+          "n_cases": 5,
+          "weighted_mae_min": 1.674268211618423,
+          "weighted_rmse_min": 3.1542052678608674,
+          "weighted_bias_min": 0.08989607736739955,
+          "maximum_case_mae_min": 3.8967503281654245,
+          "weighted_95pct_latent_coverage": 0.9944788648804647
+        },
+        "3": {
+          "n_cases": 5,
+          "weighted_mae_min": 2.2703345664011048,
+          "weighted_rmse_min": 5.121796124469212,
+          "weighted_bias_min": 1.2714353658857338,
+          "maximum_case_mae_min": 8.395443989313128,
+          "weighted_95pct_latent_coverage": 0.9919084006415769
+        }
+      },
+      "weighting": "fixed nominal all-passenger OD collapsed to corridor, reachable off-diagonal",
+      "uncertainty_note": "Latent GP marginal intervals; OD cells are not independent validation samples.",
+      "normalization": "NRMSE is divided by holdout weighted truth RMS; maximum scaled error is the worst case RMSE divided by that case's truth RMS (both use a 0.05-minute floor).",
+      "passed": false
+    },
+    "paired_appraisal": {
+      "passed": true,
+      "checks": {
+        "total_benefit_mae": {
+          "value": 85841.4293176492,
+          "limit": 1000000.0,
+          "passed": true
+        },
+        "total_benefit_p95_error": {
+          "value": 191449.8586151123,
+          "limit": 5000000.0,
+          "passed": true
+        },
+        "material_total_sign_errors": {
+          "value": 0,
+          "limit": 0,
+          "passed": true
+        },
+        "material_component_failures": {
+          "value": 0,
+          "limit": 0,
+          "passed": true
+        },
+        "maximum_mode_share_error_pp": {
+          "value": 0.09823486293787376,
+          "limit": 1.0,
+          "passed": true
+        },
+        "median_mode_share_error_pp": {
+          "value": 0.004300487943509346,
+          "limit": 0.25,
+          "passed": true
+        },
+        "maximum_section_load_relative_error": {
+          "value": 0.003644979855676719,
+          "limit": 0.03,
+          "passed": true
+        },
+        "median_section_load_relative_error": {
+          "value": 0.00020919022114830458,
+          "limit": 0.01,
+          "passed": true
+        }
+      },
+      "paired_components": {
+        "bike_health": {
+          "n": 15,
+          "mean_reference": 4541645.294385705,
+          "mean_absolute_error": 38762.17523062925,
+          "rmse": 59244.51055673642,
+          "nrmse": 0.008103496790159597,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 4541645.294385705,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "bike_time": {
+          "n": 15,
+          "mean_reference": 4259142.32835437,
+          "mean_absolute_error": 647.0780566443999,
+          "rmse": 907.405721619874,
+          "nrmse": 0.00012048529418404001,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 4259142.32835437,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "car_acc": {
+          "n": 15,
+          "mean_reference": 123348.79304720114,
+          "mean_absolute_error": 20709.928000637145,
+          "rmse": 30811.76405034872,
+          "nrmse": 0.14678483459424738,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 123348.79304720114,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "car_air": {
+          "n": 15,
+          "mean_reference": 27209.507481801385,
+          "mean_absolute_error": 4568.402551496898,
+          "rmse": 6796.766338318683,
+          "nrmse": 0.1467848345942413,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 27209.507481801385,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "car_co2": {
+          "n": 15,
+          "mean_reference": 109705.33486203825,
+          "mean_absolute_error": 18419.228353608898,
+          "rmse": 27403.71275088253,
+          "nrmse": 0.14678483459424033,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 109705.33486203825,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "car_noise": {
+          "n": 15,
+          "mean_reference": 21773.45120724185,
+          "mean_absolute_error": 3655.703438093389,
+          "rmse": 5438.873170834868,
+          "nrmse": 0.14678483459423627,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 21773.45120724185,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "car_time": {
+          "n": 15,
+          "mean_reference": 97822.10195505222,
+          "mean_absolute_error": 95299.23325004776,
+          "rmse": 127891.2206389067,
+          "nrmse": 0.7572685989348982,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 97822.10195505222,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "construction_co2": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "external_crowding": {
+          "n": 15,
+          "mean_reference": 46922.918925838174,
+          "mean_absolute_error": 27420.906387675554,
+          "rmse": 39676.55290907489,
+          "nrmse": 0.2323313641227486,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 46922.918925838174,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "external_delay": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "external_time": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "investment": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "operation": {
+          "n": 15,
+          "mean_reference": -313333.3333333333,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 313333.3333333333,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_acc": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_access": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_air": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_co2": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_crowding": {
+          "n": 15,
+          "mean_reference": 53162.48694634413,
+          "mean_absolute_error": 31251.02803372989,
+          "rmse": 45095.38434410753,
+          "nrmse": 0.23434666100073726,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 53162.48694634413,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_egress": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_noise": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_socioeconomic": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_time": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_transfer_walk": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "pt_waiting": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "total": {
+          "n": 15,
+          "mean_reference": 8720222.938448071,
+          "mean_absolute_error": 85841.4293176492,
+          "rmse": 104634.75631202766,
+          "nrmse": 0.006918776836513789,
+          "median_absolute_relative_error": 0.007850150095342151,
+          "max_absolute_relative_error": 0.07475810579315066,
+          "material": false,
+          "mean_absolute_reference": 8720222.938448071,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "upfront": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "walk_health": {
+          "n": 15,
+          "mean_reference": -247175.94538410753,
+          "mean_absolute_error": 1587.8933917149902,
+          "rmse": 2174.424855972533,
+          "nrmse": 0.005585545409348699,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 247175.94538410753,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        },
+        "walk_time": {
+          "n": 15,
+          "mean_reference": 0.0,
+          "mean_absolute_error": 0.0,
+          "rmse": 0.0,
+          "nrmse": 0.0,
+          "median_absolute_relative_error": null,
+          "max_absolute_relative_error": null,
+          "material": false,
+          "mean_absolute_reference": 0.0,
+          "error_limit_chf_per_year": 1000000.0,
+          "passed": null
+        }
+      },
+      "metrics": {
+        "0": {
+          "avg_tt_min": {
+            "n": 5,
+            "mean_reference": 14.082202450390437,
+            "mean_absolute_error": 0.005426247573657861,
+            "rmse": 0.007985937174527445,
+            "nrmse": 0.011341886615621024,
+            "median_absolute_relative_error": 0.00015248676628848028,
+            "max_absolute_relative_error": 0.001190632478575636
+          },
+          "bike_share": {
+            "n": 5,
+            "mean_reference": 0.14600005402720498,
+            "mean_absolute_error": 6.794801145096896e-05,
+            "rmse": 9.141199377858364e-05,
+            "nrmse": 0.0013502063948561706,
+            "median_absolute_relative_error": 0.00043714680105899216,
+            "max_absolute_relative_error": 0.0011365665732975545
+          },
+          "car_share": {
+            "n": 5,
+            "mean_reference": 0.472373682555154,
+            "mean_absolute_error": 0.00039776031971623383,
+            "rmse": 0.000535495856843761,
+            "nrmse": 0.011171337366740372,
+            "median_absolute_relative_error": 0.0008721852715416303,
+            "max_absolute_relative_error": 0.001972204850753976
+          },
+          "co2_tonnes": {
+            "n": 5,
+            "mean_reference": 57225.210394633425,
+            "mean_absolute_error": 40.41383750626701,
+            "rmse": 52.29112846214408,
+            "nrmse": 0.0020461568928197447,
+            "median_absolute_relative_error": 0.0008152197297158061,
+            "max_absolute_relative_error": 0.0018273393774722135
+          },
+          "pt_share": {
+            "n": 5,
+            "mean_reference": 0.33190613691327997,
+            "mean_absolute_error": 0.0003235467347746379,
+            "rmse": 0.0004377121386937518,
+            "nrmse": 0.007701156419965573,
+            "median_absolute_relative_error": 0.0010220496445309736,
+            "max_absolute_relative_error": 0.00265547097140282
+          },
+          "section_modeled_peak": {
+            "n": 5,
+            "mean_reference": 8218.14762613481,
+            "mean_absolute_error": 6.785049695446469,
+            "rmse": 9.658224394876678,
+            "nrmse": 0.0018962652367148789,
+            "median_absolute_relative_error": 0.0004565449023169464,
+            "max_absolute_relative_error": 0.003644979855676719
+          },
+          "total_cost": {
+            "n": 5,
+            "mean_reference": 1625543572.251398,
+            "mean_absolute_error": 685237.9418879986,
+            "rmse": 867115.2675517306,
+            "nrmse": 0.0007552319352951558,
+            "median_absolute_relative_error": 0.000424742529664362,
+            "max_absolute_relative_error": 0.0014107738636337523
+          },
+          "walk_share": {
+            "n": 5,
+            "mean_reference": 0.04972012650436104,
+            "mean_absolute_error": 6.265573490771281e-06,
+            "rmse": 8.998125181108703e-06,
+            "nrmse": 0.0008271526508557963,
+            "median_absolute_relative_error": 5.1911396572214146e-05,
+            "max_absolute_relative_error": 0.0003402136104446967
+          }
+        },
+        "1": {
+          "avg_tt_min": {
+            "n": 5,
+            "mean_reference": 14.08097540567488,
+            "mean_absolute_error": 0.003760713787929859,
+            "rmse": 0.004510744558440418,
+            "nrmse": 0.006406863769710879,
+            "median_absolute_relative_error": 0.0001893674257451575,
+            "max_absolute_relative_error": 0.0005101889152839731
+          },
+          "bike_share": {
+            "n": 5,
+            "mean_reference": 0.15306404556272862,
+            "mean_absolute_error": 6.147095868497821e-05,
+            "rmse": 7.651781079432809e-05,
+            "nrmse": 0.0011130100179825024,
+            "median_absolute_relative_error": 0.0003397084655451011,
+            "max_absolute_relative_error": 0.000922884888169719
+          },
+          "car_share": {
+            "n": 5,
+            "mean_reference": 0.47112167506979974,
+            "mean_absolute_error": 0.0003406039306474873,
+            "rmse": 0.00043461967230750114,
+            "nrmse": 0.009006831934346309,
+            "median_absolute_relative_error": 0.0005669806149562702,
+            "max_absolute_relative_error": 0.0016504705284242284
+          },
+          "co2_tonnes": {
+            "n": 5,
+            "mean_reference": 57081.93631983533,
+            "mean_absolute_error": 34.04169323164679,
+            "rmse": 39.67517580947337,
+            "nrmse": 0.0015554924992385974,
+            "median_absolute_relative_error": 0.000534863467540791,
+            "max_absolute_relative_error": 0.0015288256996066067
+          },
+          "pt_share": {
+            "n": 5,
+            "mean_reference": 0.3264767165821318,
+            "mean_absolute_error": 0.0002740921893340409,
+            "rmse": 0.00035361315064465606,
+            "nrmse": 0.006191410209066196,
+            "median_absolute_relative_error": 0.000597076906802624,
+            "max_absolute_relative_error": 0.0022443473472456114
+          },
+          "section_modeled_peak": {
+            "n": 5,
+            "mean_reference": 8210.847855341292,
+            "mean_absolute_error": 5.7465346143897476,
+            "rmse": 8.211033366241923,
+            "nrmse": 0.0016086872163453454,
+            "median_absolute_relative_error": 0.0002894583513328824,
+            "max_absolute_relative_error": 0.0031568127604578913
+          },
+          "total_cost": {
+            "n": 5,
+            "mean_reference": 1612664336.7431588,
+            "mean_absolute_error": 581707.6871164322,
+            "rmse": 707685.2493989712,
+            "nrmse": 0.0006188558477403886,
+            "median_absolute_relative_error": 0.00023736259972059759,
+            "max_absolute_relative_error": 0.0012321487365649962
+          },
+          "walk_share": {
+            "n": 5,
+            "mean_reference": 0.049337562785339864,
+            "mean_absolute_error": 5.040782628536189e-06,
+            "rmse": 5.509185100920461e-06,
+            "nrmse": 0.0005056539859798922,
+            "median_absolute_relative_error": 0.00011143831465532961,
+            "max_absolute_relative_error": 0.00013973630629310658
+          }
+        },
+        "2": {
+          "avg_tt_min": {
+            "n": 5,
+            "mean_reference": 14.111670706129951,
+            "mean_absolute_error": 0.0028457100349758234,
+            "rmse": 0.0034997937462645026,
+            "nrmse": 0.004960140892097533,
+            "median_absolute_relative_error": 0.0001404128825883937,
+            "max_absolute_relative_error": 0.0004108000092126093
+          },
+          "bike_share": {
+            "n": 5,
+            "mean_reference": 0.14745268997478872,
+            "mean_absolute_error": 2.925010046842258e-05,
+            "rmse": 3.415874322270132e-05,
+            "nrmse": 0.0005000108466642653,
+            "median_absolute_relative_error": 0.0002040040084377775,
+            "max_absolute_relative_error": 0.00040229617444931774
+          },
+          "car_share": {
+            "n": 5,
+            "mean_reference": 0.47123131450217903,
+            "mean_absolute_error": 0.00015050086795715957,
+            "rmse": 0.00016793876027218423,
+            "nrmse": 0.0034885819290948476,
+            "median_absolute_relative_error": 0.0003551064527462112,
+            "max_absolute_relative_error": 0.0005412341095536092
+          },
+          "co2_tonnes": {
+            "n": 5,
+            "mean_reference": 57095.042856630345,
+            "mean_absolute_error": 16.592893712222576,
+            "rmse": 18.11143823091526,
+            "nrmse": 0.0007094793242702748,
+            "median_absolute_relative_error": 0.0003347547927183272,
+            "max_absolute_relative_error": 0.0005022045996665956
+          },
+          "pt_share": {
+            "n": 5,
+            "mean_reference": 0.3317477698650745,
+            "mean_absolute_error": 0.00011791635555844505,
+            "rmse": 0.0001303048228633939,
+            "nrmse": 0.0022918929595654065,
+            "median_absolute_relative_error": 0.00037554132469013325,
+            "max_absolute_relative_error": 0.0006686660768972619
+          },
+          "section_modeled_peak": {
+            "n": 5,
+            "mean_reference": 8218.124821952666,
+            "mean_absolute_error": 1.056024412258921,
+            "rmse": 1.316832995913282,
+            "nrmse": 0.00025854380294977353,
+            "median_absolute_relative_error": 0.00015301687201444908,
+            "max_absolute_relative_error": 0.00021731840783278892
+          },
+          "total_cost": {
+            "n": 5,
+            "mean_reference": 1622548711.4186845,
+            "mean_absolute_error": 176909.75987501146,
+            "rmse": 212789.48185173844,
+            "nrmse": 0.00018550214680149502,
+            "median_absolute_relative_error": 0.00013267414679969685,
+            "max_absolute_relative_error": 0.00016703956663590124
+          },
+          "walk_share": {
+            "n": 5,
+            "mean_reference": 0.0495682256579578,
+            "mean_absolute_error": 3.334411930194792e-06,
+            "rmse": 4.208157808126261e-06,
+            "nrmse": 0.00038457134477714173,
+            "median_absolute_relative_error": 8.489630792704374e-05,
+            "max_absolute_relative_error": 0.00011665323778313794
+          }
+        },
+        "3": {
+          "avg_tt_min": {
+            "n": 5,
+            "mean_reference": 14.115508721674638,
+            "mean_absolute_error": 0.004172074772926138,
+            "rmse": 0.005542845008357429,
+            "nrmse": 0.007853553304595083,
+            "median_absolute_relative_error": 0.000138997933164755,
+            "max_absolute_relative_error": 0.0007825222916238655
+          },
+          "bike_share": {
+            "n": 5,
+            "mean_reference": 0.15517890737814885,
+            "mean_absolute_error": 5.6326840555903644e-05,
+            "rmse": 8.112638637435419e-05,
+            "nrmse": 0.0011646039633901603,
+            "median_absolute_relative_error": 0.00021607988172523342,
+            "max_absolute_relative_error": 0.0010410484458515251
+          },
+          "car_share": {
+            "n": 5,
+            "mean_reference": 0.4694230282209707,
+            "mean_absolute_error": 0.000281432433485318,
+            "rmse": 0.00039795826529351775,
+            "nrmse": 0.00819311890279983,
+            "median_absolute_relative_error": 0.00036031137980299633,
+            "max_absolute_relative_error": 0.0015951412050912576
+          },
+          "co2_tonnes": {
+            "n": 5,
+            "mean_reference": 56889.28763472186,
+            "mean_absolute_error": 28.345448122144443,
+            "rmse": 37.31176161403247,
+            "nrmse": 0.0014654185326548096,
+            "median_absolute_relative_error": 0.000336438038982298,
+            "max_absolute_relative_error": 0.0014782632916361662
+          },
+          "pt_share": {
+            "n": 5,
+            "mean_reference": 0.3262280017829031,
+            "mean_absolute_error": 0.00022134448557550312,
+            "rmse": 0.0003097026371967875,
+            "nrmse": 0.005418028817347234,
+            "median_absolute_relative_error": 0.00040207359601192105,
+            "max_absolute_relative_error": 0.0020543244869200786
+          },
+          "section_modeled_peak": {
+            "n": 5,
+            "mean_reference": 8210.710630172987,
+            "mean_absolute_error": 3.0722357823902713,
+            "rmse": 4.321888215897596,
+            "nrmse": 0.0008467072812613663,
+            "median_absolute_relative_error": 0.00027937436303220606,
+            "max_absolute_relative_error": 0.0016952999372693463
+          },
+          "total_cost": {
+            "n": 5,
+            "mean_reference": 1608486252.5031385,
+            "mean_absolute_error": 355283.7025051117,
+            "rmse": 437684.0004748704,
+            "nrmse": 0.0003832185015423638,
+            "median_absolute_relative_error": 0.00020738238850416833,
+            "max_absolute_relative_error": 0.0007422433423813815
+          },
+          "walk_share": {
+            "n": 5,
+            "mean_reference": 0.04917006261797726,
+            "mean_absolute_error": 5.672411866174121e-06,
+            "rmse": 7.989469730687352e-06,
+            "nrmse": 0.0007285660043954162,
+            "median_absolute_relative_error": 4.512748362799509e-05,
+            "max_absolute_relative_error": 0.0002575167473482443
+          }
+        }
+      },
+      "appraisal_welfare_version": "matched_zone_od_sections_external_component_vot_v4",
+      "reference": "Independent heldout MSA OD delays; identical native postprocessing; no new MSA.",
+      "scope": "Paired annual baseline/project matched benefits and physical indicators, not full-future NPV.",
+      "n_holdouts_per_stage": 5,
+      "n_independent_physical_futures": 5,
+      "surrogate_fingerprint": "91bf0bdf2b532d5ffb7c",
+      "component_rule": "Material mean benefit >= CHF5m/year: MAE <= max(10%, CHF1m/year).",
+      "current_parameters": {
+        "N_YEARS": 40,
+        "APPRAISAL_START_YEAR": 2026,
+        "DISCOUNT_RATE": 0.02,
+        "PASSENGER_DEMAND_GROWTH": 0.0,
+        "PASSENGER_DEMAND_GROWTH_Y40": 0.2,
+        "PT_ASC_SHIFT": 0.0,
+        "PT_ASC_SHIFT_Y40": 0.1,
+        "BIKE_ASC_SHIFT": 0.0,
+        "BIKE_ASC_SHIFT_Y40": 0.2,
+        "EBIKE_SHARE": 0.35,
+        "EBIKE_SHARE_Y40": 0.5,
+        "EBIKE_SPEED_MULTIPLIER": 1.35,
+        "ROAD_FREIGHT_GROWTH": 0.0,
+        "ROAD_FREIGHT_GROWTH_Y40": 0.1,
+        "PT_PEAK_SHARE": 0.11,
+        "CAR_PEAK_SHARE": 0.094,
+        "BIKE_PEAK_SHARE": 0.15,
+        "WALK_PEAK_SHARE": 0.15,
+        "EQUIVALENT_DAYS_PER_YEAR": 300,
+        "NUMBER_OF_PEAK_HOURS": 4,
+        "PEAK_TO_ANNUAL_TRAIN": 3391.5,
+        "PT_HEADWAY_BASELINE": 20.0,
+        "PT_CAPACITY_BASELINE": 11352.0,
+        "CROWDING_SLOPE": 2.0,
+        "CROWDING_MAX": 3.0,
+        "TRAIN_GROSS_TONNES": 375.0,
+        "PT_TRAIN_KM_PEAK_STAGE0": 3414.6,
+        "C_TT_CAR": 23.3,
+        "C_TT_PT": 26.52,
+        "C_TT_PT_WAITING": 26.52,
+        "C_TT_PT_ACCESS": 26.52,
+        "C_TT_PT_TRANSFER": 26.52,
+        "C_TT_BIKE": 24.8,
+        "C_TT_WALK": 16.0,
+        "BENEFIT_HEALTH_BIKE_PER_KM": 1.306,
+        "BENEFIT_HEALTH_WALK_PER_KM": 1.0,
+        "BENEFIT_SOCIOECONOMIC_PT_PER_TRIP": 0.0,
+        "CAR_CO2_KG_PER_VEHICLE_KM": 0.139,
+        "CAR_CO2_KG_PER_VEHICLE_KM_Y40": 0.05,
+        "RAIL_ENERGY_WH_PER_GROSS_TONNE_KM": 30.0,
+        "RAIL_ELECTRICITY_CO2_G_PER_KWH": 19.58,
+        "CO2_VALUE_CHF_PER_TONNE": 123.2,
+        "CO2_REFERENCE_YEAR": 2015,
+        "CO2_VALUE_ANNUAL_GROWTH": 0.03,
+        "C_NOISE_CAR": 0.0149,
+        "C_AIR_CAR": 0.01862,
+        "C_ACCIDENT_CAR": 0.08441,
+        "C_AIR_PT": 0.00344,
+        "C_NOISE_PT": 0.00204,
+        "C_ACCIDENT_PT": 0.2221,
+        "ACCIDENT_COST_MULTIPLIER": 1.0,
+        "ACCIDENT_COST_MULTIPLIER_Y40": 0.85,
+        "LOCAL_AIR_COST_MULTIPLIER": 1.0,
+        "LOCAL_AIR_COST_MULTIPLIER_Y40": 0.65,
+        "OPEX_RATE": 0.02,
+        "OPEX_MULTIPLIER": 1.0,
+        "CAPEX_MULTIPLIER": 1.0,
+        "C_FLEX": 50000000,
+        "MAX_AVG_TT": 15.0,
+        "PT_SHARE_TARGET": 0.35,
+        "BIKE_SHARE_TARGET": 0.2,
+        "MIN_STRATEGIC_PKM_DISTANCE": 2.0,
+        "C_INV_STAGE1": 10500000.0,
+        "CAPACITY_INCREASE_STAGE1": 0.0,
+        "C_INV_STAGE2": 13000000.0,
+        "CAPACITY_INCREASE_STAGE2": 0.0,
+        "CAPACITY_INCREASE_COMBINED": 0.0
+      }
+    },
+    "passed": false
+  },
+  "artifact_sha256": "1dd5e002dc8418864d7028a7d8498d6ad0cfd293ab0da35e1730e9d743df3f5f",
+  "validation_data_sha256": "4556d6d459462db9e814526d9b663144294d7ab0cd19b2f6661702f360fcb920",
+  "validation_passed": false,
+  "validation_status": "failed",
+  "runtime_seconds": 7678.959047799988,
+  "response_table": {
+    "file": "response_table.npz",
+    "schema": "transport_response_v1",
+    "fingerprint": "f5272bcfd881bbc45a0d",
+    "sha256": "b30fe29f78a173b8abcc7939957c76f68df5d807a55b65ec17df5927b802d4f8",
+    "n_conditions": 768,
+    "preparation_seconds": 4044.008946899965
+  }
+}
