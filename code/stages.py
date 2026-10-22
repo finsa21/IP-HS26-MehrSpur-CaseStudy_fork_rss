@@ -186,7 +186,7 @@ PACKAGES = {
             "capital_cost_chf": 10_500_000.00,
             "lifetime_years": 40,
             "capital_share": 0.80,
-            "construction_co2_tonnes": 0
+            "construction_co2_tonnes": 244.8
         }
     },
 
@@ -212,7 +212,7 @@ PACKAGES = {
             "capital_cost_chf": 13_000_000.00,
             "lifetime_years": 40,
             "capital_share": 0.80,
-            "construction_co2_tonnes": 0
+            "construction_co2_tonnes": 299.2
         }
     },
 
