@@ -202,6 +202,7 @@ CORRIDOR_REGIONS = {
     "Weiningen": ["Weiningen (ZH)"],
     "Unterengstringen": ["Unterengstringen"],
     "Oberengstringen": ["Oberengstringen"],
+    "Zürich": ["Zürich"]
 }
 
 # Flat list of all corridor municipalities
