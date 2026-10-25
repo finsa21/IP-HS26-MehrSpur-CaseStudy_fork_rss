@@ -177,11 +177,21 @@ PACKAGES = {
                                  'both_directions': True,
                                  'effects': {'speed_increase_pct': 54.0,
                                              'distance_reduction_pct': 0.0}},
-                                {'effects': {'speed_increase_pct': 27.0},
+                                {'effects': {'speed_increase_pct': 34.0},
                                  'name': 'Indirect Effect 3',
-                                 'area_pairs': [{'origin': {'municipality_name': 'Zürich'},
+                                 'area_pairs': [{'origin': {'city_quartier': 'Altstetten'},
                                                  'destination': {'municipality_name': 'Urdorf'}}],
-                                 'both_directions': True}],
+                                 'both_directions': True},
+                                 {'effects': {'speed_increase_pct': 22.0},
+                                'name': 'Indirect Effect 3',
+                                'area_pairs': [{'origin': {'city_quartier': 'Altstetten'},
+                                                'destination': {'municipality_name': 'Unterengstringen'}}],
+                                'both_directions': True},
+                                 {'effects': {'speed_increase_pct': 27.0},
+                                'name': 'Indirect Effect 6',
+                                'area_pairs': [{'origin': {'municipality_name': 'Schlieren'},
+                                                'destination': {'municipality_name': 'Urdorf'}}],
+                                'both_directions': True}],
         "appraisal": {
             "capital_cost_chf": 10_500_000.00,
             "lifetime_years": 40,
@@ -332,13 +342,26 @@ PACKAGES = {
 # Extra effects available only when BOTH packages are operating. These minutes
 # are added to the package values: 6 minutes of section saving and 5 minutes
 # of headway reduction in total (20-minute baseline -> 15-minute service).
-COMBINED_EFFECTS = {'bike_highways': [{'effects': {'speed_increase_pct': 32.0},
+COMBINED_EFFECTS = {'bike_highways': [{'effects': {'speed_increase_pct': 27.0},
                     'name': 'Indirect effect 1',
                     'area_pairs': [{'origin': {'municipality_name': 'Schlieren'},
                                     'destination': {'municipality_name': 'Geroldswil'}}],
                     'both_directions': True},
-                   {'effects': {'speed_increase_pct': 40.0},
+                    {'effects': {'speed_increase_pct': 30.0},
+                    'name': 'Indirect effect 5',
+                    'area_pairs': [{'origin': {'city_quartier': 'Altstetten'},
+                                    'destination': {'municipality_name': 'Geroldswil'}}],
+                    'both_directions': True},
+                   {'effects': {'speed_increase_pct': 42.0},
                     'name': 'Indirect Effect 2',
+                    'area_pairs': [{'origin': {'city_quartier': 'Altstetten'},
+                                    'destination': {'municipality_name': 'Oetwil '
+                                                                         'an '
+                                                                         'der '
+                                                                         'Limmat'}}],
+                    'both_directions': True},
+                                       {'effects': {'speed_increase_pct': 40.0},
+                    'name': 'Indirect Effect 7',
                     'area_pairs': [{'origin': {'municipality_name': 'Schlieren'},
                                     'destination': {'municipality_name': 'Oetwil '
                                                                          'an '
