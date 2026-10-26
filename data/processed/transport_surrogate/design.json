@@ -11,7 +11,7 @@
     },
     "points_added": 20,
     "final_holdout_metrics": {
-      "weighted_rmse_min": 0.2599246346192538
+      "weighted_rmse_min": 0.2654971626771473
     },
     "target_reached": false
   },
@@ -1648,11 +1648,11 @@
       "pair_id": null,
       "stage": 0,
       "inputs": {
-        "PASSENGER_DEMAND_GROWTH": 0.4974800050346235,
-        "PT_ASC_SHIFT": 0.26846525575913616,
-        "BIKE_ASC_SHIFT": 0.9043370013226817,
-        "EBIKE_SHARE": 0.7940093260566179,
-        "ROAD_FREIGHT_GROWTH": 0.2236402017230399
+        "PASSENGER_DEMAND_GROWTH": 0.4857083278258701,
+        "PT_ASC_SHIFT": 0.2815017807274308,
+        "BIKE_ASC_SHIFT": 0.8852049965738948,
+        "EBIKE_SHARE": 0.7862031169309496,
+        "ROAD_FREIGHT_GROWTH": 0.24712504879251296
       }
     },
     {
@@ -1661,11 +1661,11 @@
       "pair_id": null,
       "stage": 0,
       "inputs": {
-        "PASSENGER_DEMAND_GROWTH": 0.4857083278258701,
-        "PT_ASC_SHIFT": 0.2815017807274308,
-        "BIKE_ASC_SHIFT": 0.8852049965738948,
-        "EBIKE_SHARE": 0.7862031169309496,
-        "ROAD_FREIGHT_GROWTH": 0.24712504879251296
+        "PASSENGER_DEMAND_GROWTH": 0.4974800050346235,
+        "PT_ASC_SHIFT": 0.26846525575913616,
+        "BIKE_ASC_SHIFT": 0.9043370013226817,
+        "EBIKE_SHARE": 0.7940093260566179,
+        "ROAD_FREIGHT_GROWTH": 0.2236402017230399
       }
     },
     {
@@ -1840,7 +1840,7 @@
   ],
   "cache_contract": {
     "format_version": 3,
-    "model_fingerprint": "ee0f20526e25782c41df",
+    "model_fingerprint": "483beddec8aee9db2fb9",
     "reference_equations": "19783b770214fd1a0541",
     "solver_settings": {
       "stopping_rule": "road_relative_gap",
@@ -2050,12 +2050,44 @@
           },
           {
             "effects": {
+              "speed_increase_pct": 34.0
+            },
+            "area_pairs": [
+              {
+                "origin": {
+                  "city_quartier": "Altstetten"
+                },
+                "destination": {
+                  "municipality_name": "Urdorf"
+                }
+              }
+            ],
+            "both_directions": true
+          },
+          {
+            "effects": {
+              "speed_increase_pct": 22.0
+            },
+            "area_pairs": [
+              {
+                "origin": {
+                  "city_quartier": "Altstetten"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              }
+            ],
+            "both_directions": true
+          },
+          {
+            "effects": {
               "speed_increase_pct": 27.0
             },
             "area_pairs": [
               {
                 "origin": {
-                  "municipality_name": "Z\u00fcrich"
+                  "municipality_name": "Schlieren"
                 },
                 "destination": {
                   "municipality_name": "Urdorf"
@@ -2724,12 +2756,44 @@
           },
           {
             "effects": {
+              "speed_increase_pct": 34.0
+            },
+            "area_pairs": [
+              {
+                "origin": {
+                  "city_quartier": "Altstetten"
+                },
+                "destination": {
+                  "municipality_name": "Urdorf"
+                }
+              }
+            ],
+            "both_directions": true
+          },
+          {
+            "effects": {
+              "speed_increase_pct": 22.0
+            },
+            "area_pairs": [
+              {
+                "origin": {
+                  "city_quartier": "Altstetten"
+                },
+                "destination": {
+                  "municipality_name": "Unterengstringen"
+                }
+              }
+            ],
+            "both_directions": true
+          },
+          {
+            "effects": {
               "speed_increase_pct": 27.0
             },
             "area_pairs": [
               {
                 "origin": {
-                  "municipality_name": "Z\u00fcrich"
+                  "municipality_name": "Schlieren"
                 },
                 "destination": {
                   "municipality_name": "Urdorf"
@@ -2757,7 +2821,7 @@
           },
           {
             "effects": {
-              "speed_increase_pct": 32.0
+              "speed_increase_pct": 27.0
             },
             "area_pairs": [
               {
@@ -2766,6 +2830,38 @@
                 },
                 "destination": {
                   "municipality_name": "Geroldswil"
+                }
+              }
+            ],
+            "both_directions": true
+          },
+          {
+            "effects": {
+              "speed_increase_pct": 30.0
+            },
+            "area_pairs": [
+              {
+                "origin": {
+                  "city_quartier": "Altstetten"
+                },
+                "destination": {
+                  "municipality_name": "Geroldswil"
+                }
+              }
+            ],
+            "both_directions": true
+          },
+          {
+            "effects": {
+              "speed_increase_pct": 42.0
+            },
+            "area_pairs": [
+              {
+                "origin": {
+                  "city_quartier": "Altstetten"
+                },
+                "destination": {
+                  "municipality_name": "Oetwil an der Limmat"
                 }
               }
             ],
@@ -3311,7 +3407,7 @@
     "code/additional/uncertainty.py": "c4e276867e04948dbd5adcab14a653106bb729ae8a8e3dfe7c6161c34303dfdc",
     "code/parameters.py": "cc79e03fc47965bf79b2f8bfccfab2a0e5c6fea6c588df4ddd36f0928adbb8e9",
     "code/simulation_engine.py": "72b0f369364272978048a5fa3ddabab7c47355766ffffe7ec6c7b00cef844a8e",
-    "code/stages.py": "5f316ccc287ebc4e479de7ae0e8643bb0d562e26331ec9f14373f6483c1413f8",
+    "code/stages.py": "91ddaa428e4f938062fe2b55caea9676622507378f9dee71639ecd8d62423e76",
     "code/surrogate_model/__init__.py": "e14f9360129c8a8d333cee6c7b17230d83b71c55fd9c2e467149a28a44948039",
     "code/surrogate_model/build_transport_surrogate.py": "69e2f0c6f52dc75ee547d7ac6d2cebe79d1243044a98b6ab80bf729135113d63",
     "code/surrogate_model/od_gp.py": "9b82a8b74e117e2c49ed4082ea44752153894071bb7d09088534abcf2dc6879c",
@@ -3342,7 +3438,7 @@
     "code/additional/uncertainty.py": "c4e276867e04948dbd5adcab14a653106bb729ae8a8e3dfe7c6161c34303dfdc",
     "code/parameters.py": "cc79e03fc47965bf79b2f8bfccfab2a0e5c6fea6c588df4ddd36f0928adbb8e9",
     "code/simulation_engine.py": "72b0f369364272978048a5fa3ddabab7c47355766ffffe7ec6c7b00cef844a8e",
-    "code/stages.py": "5f316ccc287ebc4e479de7ae0e8643bb0d562e26331ec9f14373f6483c1413f8",
+    "code/stages.py": "91ddaa428e4f938062fe2b55caea9676622507378f9dee71639ecd8d62423e76",
     "code/surrogate_model/__init__.py": "e14f9360129c8a8d333cee6c7b17230d83b71c55fd9c2e467149a28a44948039",
     "code/surrogate_model/build_transport_surrogate.py": "69e2f0c6f52dc75ee547d7ac6d2cebe79d1243044a98b6ab80bf729135113d63",
     "code/surrogate_model/od_gp.py": "9b82a8b74e117e2c49ed4082ea44752153894071bb7d09088534abcf2dc6879c",
