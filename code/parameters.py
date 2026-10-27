@@ -159,7 +159,7 @@ NOMINAL_PARAMS = {
     # -------------------------------------------------------------------------
     "MAX_AVG_TT": 15.0,  # Acceptability ceiling for peak car/PT in-vehicle time plus car delay (min/trip).
     "PT_SHARE_TARGET": 0.35,  # Teaching minimum for PT share of strategic passenger-km; baseline is about 31.9%.
-    "BIKE_SHARE_TARGET": 0.20,  # .
+    "BIKE_SHARE_TARGET": 0.10,  # .
 
     "MIN_STRATEGIC_PKM_DISTANCE": 2.0,  # Minimum OD distance for strategic mode-share indicators (km); not an appraisal cutoff.
 
@@ -348,8 +348,8 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
          "use": "scenarios",
          "transient": True,
          "distribution": "triangular",
-         "minimum": -0.50,
-         "maximum": 1.00,
+         "minimum": -0.30,
+         "maximum": 0.70,
      },
     "EBIKE_SHARE": {  # Final e-bike fraction; starts from the known baseline share.
         "category": "transport_modelling",
