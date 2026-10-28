@@ -1,7 +1,7 @@
 {
-  "surrogate_fingerprint": "483beddec8aee9db2fb9",
-  "surrogate_artifact_sha256": "c3de255c83a7ee40bbc5c22a94882763854a6f285702ecb12130e67fc7116606",
-  "response_table_fingerprint": "5820c506a4aeebee5a21",
+  "surrogate_fingerprint": "8a7f2ea860559198d80a",
+  "surrogate_artifact_sha256": "ef1adbd91a8cd46d5b7ac200d12d79c6151fe8f1264c9930d69dae5e9d5a9e59",
+  "response_table_fingerprint": "fbbca93ba3367c9dc2e2",
   "surrogate_format_version": 3,
   "transport_uncertainties": [
     "PASSENGER_DEMAND_GROWTH",
@@ -41,8 +41,8 @@
       "nominal": 0.0
     },
     "BIKE_ASC_SHIFT": {
-      "minimum": -0.5,
-      "maximum": 1.0,
+      "minimum": -0.3,
+      "maximum": 0.7,
       "nominal": 0.0
     },
     "EBIKE_SHARE": {
