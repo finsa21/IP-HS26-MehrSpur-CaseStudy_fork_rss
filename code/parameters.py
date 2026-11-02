@@ -199,7 +199,7 @@ CORRIDOR_REGIONS = {
     "Schlieren": ["Schlieren"],
     "Dietikon": ["Dietikon"],
     "Geroldswil": ["Geroldswil"],
-    "Oetwil an der Limmat": ["Oetwil an der Limmat"],
+    #"Oetwil an der Limmat": ["Oetwil an der Limmat"],
     "Weiningen": ["Weiningen (ZH)"],
     "Unterengstringen": ["Unterengstringen"],
     "Oberengstringen": ["Oberengstringen"],
@@ -223,7 +223,7 @@ DETAILED_NETWORK_FILE = "data/processed/cycling_limmattal_detailed_network.pkl"
 # OPTION B: Define by Explicit Zone IDs
 # -----------------------------------------------------------------------------
 # Example: enable zone selection, define groups, then flatten their IDs.
-# CORRIDOR_DEFINITION_MODE = "zones"
+CORRIDOR_DEFINITION_MODE = "zones"
 # PROJECT_ZONES = {
 #     # 1. Zürich Eastern Alignment into CBD: Bellevue, Stadelhofen, Kreuzplatz, Römerhof,
 #     #    Hegibachplatz, Burgwies, Balgrist, Rehalp (S18 border loop), and Witikon
@@ -245,8 +245,52 @@ DETAILED_NETWORK_FILE = "data/processed/cycling_limmattal_detailed_network.pkl"
 #     ]
 
 # }
+
+PROJECT_ZONES = {
+    # Zurich city quarter Altstetten (includes the Grünau area; no separate quarter in ctx.zones)
+    "Zürich Altstetten": [
+        "26101001", "26101002", "26101003", "26101004", "26101006",
+        "26101008", "26101010", "26101012", "26101013", "26101015",
+        "26101016", "26101018", "26101019", "26101020", "26101021",
+        "26101023", "26101029", "26101030", "26101032", "26101033",
+        "26101034", "26101039", "26101041", "26101046", "26103306",
+    ],
+    # Zurich city quarter Höngg
+    "Zürich Höngg": [
+        "26101005", "26101007", "26101011", "26101022", "26101024",
+        "26101027", "26101031", "26101042", "26101045", "26101054",
+        "26101058", "26101064",
+    ],
+    
+    "Schlieren": [
+        "24701001", "24701002", "24701003", "24701004", "24701005",
+        "24701006", "24701007", "24701008", "24701009", "24701010",
+        "24701011", "24701012", "24701013", "24701014", "24701015",
+        "24701016", "24701017", "24701018", "24701019", "24701020",
+    ],
+    "Dietikon": [
+        "24301001", "24301002", "24301003", "24301004", "24301005",
+        "24301006", "24301007", "24301008", "24301009", "24301010",
+        "24301011", "24301012", "24301013", "24301014", "24301015",
+        "24301016", "24301017", "24301018", "24301019", "24301020",
+        "24301021", "24301022", "24301023", "24301024", "24301025",
+        "24301026", "24301027",
+    ],
+
+     # Geroldswil, Oberengstringen, Unterengstringen, Urdorf, Weiningen (ZH)
+    "restliches Limmattal": [
+        "24401001", "24401002", "24401003", "24401004", "24401005",
+        "24501001", "24501002", "24501003", "24501004",
+        "24901001", "24901002", "24901003",
+        "25001001", "25001002", "25001003", "25001004", "25001005",
+        "25001006", "25001007", "25001008", "25001009",
+        "25101001", "25101002", "25101003", "25101004",
+        ],
+    }
+    
+
 # Flat list of active corridor zone IDs:
-# CORRIDOR_ZONE_IDS = [z for zone_list in PROJECT_ZONES.values() for z in zone_list]
+CORRIDOR_ZONE_IDS = [z for zone_list in PROJECT_ZONES.values() for z in zone_list]
 # -----------------------------------------------------------------------------
 
 # Optional route coverage, including trips with endpoints outside the corridor.
