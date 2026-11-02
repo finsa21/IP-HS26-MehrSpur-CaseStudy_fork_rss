@@ -192,59 +192,59 @@ PACKAGES = {
                                 'area_pairs': [{'origin': {'municipality_name': 'Schlieren'},
                                                 'destination': {'municipality_name': 'Urdorf'}}],
                                 'both_directions': True},
-                                # --- PROPOSED ADDITIONS (uncomment to use; requires surrogate rebuild) ---
+                                # --- PROPOSED ADDITIONS (active; changing them requires a surrogate rebuild) ---
                                 # Partial-route rule: if a share f of the trip runs on the highway
                                 # (+54 % speed), the whole-trip speed gain is 1 / ((1 - f) + f / 1.54) - 1.
                                 # f = 0.3 -> +12 %, 0.4 -> +16 %, 0.45 -> +19 %, 0.5 -> +21 %, 0.6 -> +27 %.
                                 # f is estimated from centroid distances (Altstetten-Schlieren ~3 km).
                                 #
                                 # Albisrieden is reached via Altstetten (~4.1 km to Schlieren, f ~ 0.6).
-                                # {'name': 'Proposed: Albisrieden - Schlieren',
-                                #  'area_pairs': [{'origin': {'city_quartier': 'Albisrieden'},
-                                #                  'destination': {'municipality_name': 'Schlieren'}}],
-                                #  'both_directions': True,
-                                #  'effects': {'speed_increase_pct': 27.0}},
+                                {'name': 'Proposed: Albisrieden - Schlieren',
+                                 'area_pairs': [{'origin': {'city_quartier': 'Albisrieden'},
+                                                 'destination': {'municipality_name': 'Schlieren'}}],
+                                 'both_directions': True,
+                                 'effects': {'speed_increase_pct': 27.0}},
                                 #
                                 # Districts 4/5 to Schlieren (5.2-6.5 km, about half on the highway, f ~ 0.5).
-                                # {'name': 'Proposed: Districts 4/5 - Schlieren',
-                                #  'area_pairs': [{'origin': {'city_quartier': ['Hard', 'Escher Wyss', 'Sihlfeld',
-                                #                                                'Gewerbeschule', 'Langstrasse']},
-                                #                  'destination': {'municipality_name': 'Schlieren'}}],
-                                #  'both_directions': True,
-                                #  'effects': {'speed_increase_pct': 21.0}},
+                                {'name': 'Proposed: Districts 4/5 - Schlieren',
+                                 'area_pairs': [{'origin': {'city_quartier': ['Hard', 'Escher Wyss', 'Sihlfeld',
+                                                                               'Gewerbeschule', 'Langstrasse']},
+                                                 'destination': {'municipality_name': 'Schlieren'}}],
+                                 'both_directions': True,
+                                 'effects': {'speed_increase_pct': 21.0}},
                                 #
                                 # Höngg lies north of the Limmat; the route to Schlieren may instead use
                                 # the north bank via Engstringen. Optional, conservative f ~ 0.4.
-                                # {'name': 'Proposed: Höngg - Schlieren',
-                                #  'area_pairs': [{'origin': {'city_quartier': 'Höngg'},
-                                #                  'destination': {'municipality_name': 'Schlieren'}}],
-                                #  'both_directions': True,
-                                #  'effects': {'speed_increase_pct': 16.0}},
+                                {'name': 'Proposed: Höngg - Schlieren',
+                                 'area_pairs': [{'origin': {'city_quartier': 'Höngg'},
+                                                 'destination': {'municipality_name': 'Schlieren'}}],
+                                 'both_directions': True,
+                                 'effects': {'speed_increase_pct': 16.0}},
                                 #
                                 # Trips to Dietikon also use the Stage 1 section. The matching Stage 2
                                 # entries are in the tunnel package; with both stages the factors multiply
                                 # (e.g. Altstetten-Dietikon: 1.19 x 1.24 = +47 %, close to the full +54 %).
                                 # Altstetten - Dietikon (6.7 km, Stage 1 share f ~ 0.45).
-                                # {'name': 'Proposed: Altstetten - Dietikon (Stage 1 part)',
-                                #  'area_pairs': [{'origin': {'city_quartier': 'Altstetten'},
-                                #                  'destination': {'municipality_name': 'Dietikon'}}],
-                                #  'both_directions': True,
-                                #  'effects': {'speed_increase_pct': 19.0}},
+                                {'name': 'Proposed: Altstetten - Dietikon (Stage 1 part)',
+                                 'area_pairs': [{'origin': {'city_quartier': 'Altstetten'},
+                                                 'destination': {'municipality_name': 'Dietikon'}}],
+                                 'both_directions': True,
+                                 'effects': {'speed_increase_pct': 19.0}},
                                 #
                                 # Albisrieden/Höngg - Dietikon (7.1-7.5 km, Stage 1 share f ~ 0.4).
-                                # {'name': 'Proposed: Albisrieden/Höngg - Dietikon (Stage 1 part)',
-                                #  'area_pairs': [{'origin': {'city_quartier': ['Albisrieden', 'Höngg']},
-                                #                  'destination': {'municipality_name': 'Dietikon'}}],
-                                #  'both_directions': True,
-                                #  'effects': {'speed_increase_pct': 16.0}},
+                                {'name': 'Proposed: Albisrieden/Höngg - Dietikon (Stage 1 part)',
+                                 'area_pairs': [{'origin': {'city_quartier': ['Albisrieden', 'Höngg']},
+                                                 'destination': {'municipality_name': 'Dietikon'}}],
+                                 'both_directions': True,
+                                 'effects': {'speed_increase_pct': 16.0}},
                                 #
                                 # Districts 4/5 - Dietikon (8.8-10 km, Stage 1 share f ~ 0.3).
-                                # {'name': 'Proposed: Districts 4/5 - Dietikon (Stage 1 part)',
-                                #  'area_pairs': [{'origin': {'city_quartier': ['Hard', 'Escher Wyss', 'Sihlfeld',
-                                #                                                'Gewerbeschule', 'Langstrasse']},
-                                #                  'destination': {'municipality_name': 'Dietikon'}}],
-                                #  'both_directions': True,
-                                #  'effects': {'speed_increase_pct': 12.0}},
+                                {'name': 'Proposed: Districts 4/5 - Dietikon (Stage 1 part)',
+                                 'area_pairs': [{'origin': {'city_quartier': ['Hard', 'Escher Wyss', 'Sihlfeld',
+                                                                               'Gewerbeschule', 'Langstrasse']},
+                                                 'destination': {'municipality_name': 'Dietikon'}}],
+                                 'both_directions': True,
+                                 'effects': {'speed_increase_pct': 12.0}},
                                 ],
         "appraisal": {
             "capital_cost_chf": 10_500_000.00,
@@ -271,31 +271,31 @@ PACKAGES = {
                     "distance_reduction_pct": 0.0
                 }
             },
-            # --- PROPOSED ADDITIONS (uncomment to use; requires surrogate rebuild) ---
+            # --- PROPOSED ADDITIONS (active; changing them requires a surrogate rebuild) ---
             # Stage 2 part of the city-Dietikon trips; pair each with its Stage 1 entry.
             # Same partial-route rule as in Stage 1 (Schlieren-Dietikon ~3.6 km).
             #
             # Altstetten - Dietikon (Stage 2 share f ~ 0.55).
-            # {"name": "Proposed: Altstetten - Dietikon (Stage 2 part)",
-            #  "area_pairs": [{"origin": {"city_quartier": "Altstetten"},
-            #                  "destination": {"municipality_name": "Dietikon"}}],
-            #  "both_directions": True,
-            #  "effects": {"speed_increase_pct": 24.0}},
+            {"name": "Proposed: Altstetten - Dietikon (Stage 2 part)",
+             "area_pairs": [{"origin": {"city_quartier": "Altstetten"},
+                             "destination": {"municipality_name": "Dietikon"}}],
+             "both_directions": True,
+             "effects": {"speed_increase_pct": 24.0}},
             #
             # Albisrieden/Höngg - Dietikon (Stage 2 share f ~ 0.48).
-            # {"name": "Proposed: Albisrieden/Höngg - Dietikon (Stage 2 part)",
-            #  "area_pairs": [{"origin": {"city_quartier": ["Albisrieden", "Höngg"]},
-            #                  "destination": {"municipality_name": "Dietikon"}}],
-            #  "both_directions": True,
-            #  "effects": {"speed_increase_pct": 20.0}},
+            {"name": "Proposed: Albisrieden/Höngg - Dietikon (Stage 2 part)",
+             "area_pairs": [{"origin": {"city_quartier": ["Albisrieden", "Höngg"]},
+                             "destination": {"municipality_name": "Dietikon"}}],
+             "both_directions": True,
+             "effects": {"speed_increase_pct": 20.0}},
             #
             # Districts 4/5 - Dietikon (Stage 2 share f ~ 0.36).
-            # {"name": "Proposed: Districts 4/5 - Dietikon (Stage 2 part)",
-            #  "area_pairs": [{"origin": {"city_quartier": ["Hard", "Escher Wyss", "Sihlfeld",
-            #                                                "Gewerbeschule", "Langstrasse"]},
-            #                  "destination": {"municipality_name": "Dietikon"}}],
-            #  "both_directions": True,
-            #  "effects": {"speed_increase_pct": 14.0}},
+            {"name": "Proposed: Districts 4/5 - Dietikon (Stage 2 part)",
+             "area_pairs": [{"origin": {"city_quartier": ["Hard", "Escher Wyss", "Sihlfeld",
+                                                           "Gewerbeschule", "Langstrasse"]},
+                             "destination": {"municipality_name": "Dietikon"}}],
+             "both_directions": True,
+             "effects": {"speed_increase_pct": 14.0}},
         ],
         "appraisal": {
             "capital_cost_chf": 13_000_000.00,
