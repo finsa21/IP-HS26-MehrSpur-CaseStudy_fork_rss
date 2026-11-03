@@ -125,16 +125,16 @@ PLAN_DEFINITIONS = {
         "initial_packages": ["stations", "tunnel"], "stations": None, "tunnel": None,
     },
     "staged1": {
-        "name": "Staged 1",
+        "name": "Staged 1", # early fixed rollout: Stage 1 as soon as possible (4-year lead time), Stage 2 five years later
         "initial_packages": [],
-        "stations": {"type": "fixed", "opening_year": 8},
-        "tunnel": {"type": "fixed", "opening_year": 11},
+        "stations": {"type": "fixed", "opening_year": 5},
+        "tunnel": {"type": "fixed", "opening_year": 10},
     },
     "staged2": {
-        "name": "Staged 2",
+        "name": "Staged 2", # fixed rollout at the median trigger openings of the flexible plan (Notebook 04, Section 5.5)
         "initial_packages": [],
-        "stations": {"type": "fixed", "opening_year": 6},
-        "tunnel": {"type": "fixed", "opening_year": 15},
+        "stations": {"type": "fixed", "opening_year": 20},
+        "tunnel": {"type": "fixed", "opening_year": 21},
     },
     "flexible": {
         "name": "Flexible",
