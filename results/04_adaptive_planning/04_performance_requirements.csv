@@ -1,2 +1,2 @@
 ﻿indicator,operator,threshold,start_year
-bike_share,>=,0.1,25
+bike_share,>=,0.13,25

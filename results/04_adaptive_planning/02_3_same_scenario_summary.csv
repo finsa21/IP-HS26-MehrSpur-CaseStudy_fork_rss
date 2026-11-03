@@ -1,0 +1,7 @@
+﻿plan,acceptable_years_percent,failure_years,discounted_expenditure_MCHF,bike_share_failure_years,bike_share_first_failure_year,final_bike_share,package_1_opening_year,package_2_opening_year
+baseline,100.0,0,0.0,0,,0.14089537025061183,,
+static1,100.0,0,16.03876828761384,0,,0.1443052874020795,1.0,
+static2,100.0,0,35.896290929421454,0,,0.14695028781516628,1.0,1.0
+staged1,100.0,0,30.109972074361036,0,,0.14695028781516628,5.0,10.0
+staged2,100.0,0,20.956510166817463,0,,0.14695028781516628,20.0,21.0
+adaptive,100.0,0,15.048032564334788,0,,0.14695028781516628,34.0,36.0
