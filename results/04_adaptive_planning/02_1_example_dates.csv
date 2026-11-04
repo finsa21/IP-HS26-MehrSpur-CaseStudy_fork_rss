@@ -1,6 +1,6 @@
-﻿scenario,failure_years,bike_share_failure_years,bike_share_first_failure_year,demand_growth_y40,pt_asc_shift_y40,bike_asc_shift_y40,package_1_decision_year,package_1_opening_year,package_2_decision_year,package_2_opening_year
-1. Strong cycling,0,0,,0.1741657386773941,0.1,0.42613872124741686,,,,
-2. Weak cycling,16,16,25.0,0.1741657386773941,0.1,-0.07639320225002103,10.0,14.0,26.0,30.0
-3. Borderline cycling,1,1,25.0,0.1741657386773941,0.1,0.11833001326703779,17.0,21.0,31.0,35.0
-"4. Weak cycling, attractive PT",16,16,25.0,0.2,0.21055728090000844,0.016227766016837952,4.0,8.0,31.0,35.0
-5. Strong car-traffic growth,0,0,,0.397530492340404,0.1,0.25278640450004214,5.0,9.0,4.0,8.0
+﻿scenario,failure_years,bike_share_failure_years,bike_share_first_failure_year,car_share_failure_years,car_share_first_failure_year,demand_growth_y40,pt_asc_shift_y40,bike_asc_shift_y40,package_1_decision_year,package_1_opening_year,package_2_decision_year,package_2_opening_year
+1. Strong cycling,4,0,,4,25.0,0.1741657386773941,0.1,0.42613872124741686,,,,
+2. Weak cycling,16,16,25.0,13,25.0,0.1741657386773941,0.1,-0.07639320225002103,10.0,14.0,,
+3. Borderline cycling,9,1,25.0,9,25.0,0.1741657386773941,0.1,0.11833001326703779,17.0,21.0,,
+"4. Weak cycling, attractive PT",16,16,25.0,0,,0.2,0.21055728090000844,0.016227766016837952,4.0,8.0,,
+5. Strong car-traffic growth,0,0,,0,,0.397530492340404,0.1,0.25278640450004214,5.0,9.0,10.0,14.0

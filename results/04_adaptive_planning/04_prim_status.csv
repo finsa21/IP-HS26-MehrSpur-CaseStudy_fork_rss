@@ -1,3 +1,5 @@
 ﻿requirement,plan,scenarios,failures,failure_percent,status,accepted,density,coverage,density_threshold
 1: bike_share >= 0.13,baseline,200,70,35.0,Qualifying box,True,1.0,0.6142857142857143,0.75
-1: bike_share >= 0.13,adaptive,200,54,27.0,Qualifying box,True,1.0,0.5,0.75
+1: bike_share >= 0.13,adaptive,200,58,28.999999999999996,Qualifying box,True,1.0,0.5862068965517241,0.75
+2: car_share <= 0.49,baseline,200,139,69.5,Qualifying box,True,1.0,0.6762589928057554,0.75
+2: car_share <= 0.49,adaptive,200,136,68.0,Qualifying box,True,1.0,0.6911764705882353,0.75

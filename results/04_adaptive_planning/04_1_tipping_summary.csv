@@ -1,5 +1,5 @@
 ﻿configuration,initial_shortfall_percent,all_requirements_met_percent,mean_failure_years,median_first_failure_year_among_failures
-Stage 0 – Baseline Network,0.0,65.0,4.28,25.0
-Stage 1 – Bike Highway Zürich Altstetten–Schlieren,0.0,73.0,3.42,25.0
-Stage 2 – Bike Highway Schlieren–Dietikon,0.0,71.5,3.75,25.0
-Both stages combined Altstette - Dietikon,0.0,79.0,2.74,25.0
+Stage 0 – Baseline Network,0.0,24.0,9.1,25.0
+Stage 1 – Bike Highway Zürich Altstetten–Schlieren,0.0,29.0,8.34,25.0
+Stage 2 – Bike Highway Schlieren–Dietikon,0.0,28.0,8.62,25.0
+Both stages combined Altstette - Dietikon,0.0,34.0,7.56,25.0

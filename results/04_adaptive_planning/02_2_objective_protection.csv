@@ -1,2 +1,3 @@
 ﻿requirement,first_failure_year,failure_years,assessment_start,assessment_end
 1: bike_share >= 0.13,25,16,25,40
+2: car_share <= 0.49,25,13,25,40

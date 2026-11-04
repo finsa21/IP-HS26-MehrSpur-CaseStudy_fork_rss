@@ -1,5 +1,5 @@
 ﻿transition,scenarios_with_window,with_window_percent,reachable_window_percent,mean_restorable_years,median_last_restoration_decision
-Stage 0 – Baseline Network → Stage 1 – Bike Highway Zürich Altstetten–Schlieren,31,15.5,15.5,0.86,26.0
-Stage 0 – Baseline Network → Stage 2 – Bike Highway Schlieren–Dietikon,27,13.5,13.5,0.54,24.0
-Stage 1 – Bike Highway Zürich Altstetten–Schlieren → Both stages combined Altstette - Dietikon,22,11.0,11.0,0.68,25.0
-Stage 2 – Bike Highway Schlieren–Dietikon → Both stages combined Altstette - Dietikon,25,12.5,12.5,1.01,27.0
+Stage 0 – Baseline Network → Stage 1 – Bike Highway Zürich Altstetten–Schlieren,71,35.5,35.5,0.76,27.0
+Stage 0 – Baseline Network → Stage 2 – Bike Highway Schlieren–Dietikon,63,31.5,31.5,0.47,27.0
+Stage 1 – Bike Highway Zürich Altstetten–Schlieren → Both stages combined Altstette - Dietikon,72,36.0,36.0,0.77,26.5
+Stage 2 – Bike Highway Schlieren–Dietikon → Both stages combined Altstette - Dietikon,74,37.0,37.0,1.06,27.5
