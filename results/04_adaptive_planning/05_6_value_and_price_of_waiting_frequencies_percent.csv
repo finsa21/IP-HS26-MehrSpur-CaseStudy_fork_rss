@@ -1,3 +1,4 @@
 ﻿comparator,Lower expenditure; more failure,Lower expenditure; no more failure,No saving; more failure,No saving; no more failure
-staged1,32.5,67.5,0.0,0.0
-staged2,30.5,44.5,2.0,23.0
+staged2,36.0,52.0,1.5,10.5
+static1,21.0,60.0,0.0,19.0
+static2,37.5,62.5,0.0,0.0
