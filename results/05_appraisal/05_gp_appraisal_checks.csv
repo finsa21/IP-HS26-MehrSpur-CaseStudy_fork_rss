@@ -1,5 +1,5 @@
 ﻿index,value,limit,passed
-total_benefit_mae,34652.80706518491,1000000.0,True
+total_benefit_mae,34652.807065169014,1000000.0,True
 total_benefit_p95_error,89952.37275774476,5000000.0,True
 material_total_sign_errors,0.0,0.0,True
 material_component_failures,0.0,0.0,True
