@@ -2,7 +2,7 @@
   "passed": true,
   "checks": {
     "total_benefit_mae": {
-      "value": 34652.807065169014,
+      "value": 34652.80706518491,
       "limit": 1000000.0,
       "passed": true
     },
@@ -58,14 +58,14 @@
     },
     "bike_time": {
       "n": 15,
-      "mean_reference": 5131753.493387347,
-      "mean_absolute_error": 1497.5623123884202,
-      "rmse": 1986.1041244092958,
-      "nrmse": 0.00023869361067347495,
+      "mean_reference": 5131753.4933873415,
+      "mean_absolute_error": 1497.562312402328,
+      "rmse": 1986.104124430648,
+      "nrmse": 0.0002386936106760411,
       "median_absolute_relative_error": 0.0002484036042983995,
-      "max_absolute_relative_error": 0.0006773236410331789,
+      "max_absolute_relative_error": 0.0006773236410447108,
       "material": true,
-      "mean_absolute_reference": 5131753.493387347,
+      "mean_absolute_reference": 5131753.4933873415,
       "error_limit_chf_per_year": 1000000.0,
       "passed": true
     },
@@ -358,9 +358,9 @@
     "total": {
       "n": 15,
       "mean_reference": 11295698.053267289,
-      "mean_absolute_error": 34652.807065169014,
-      "rmse": 46092.766517795586,
-      "nrmse": 0.0026348154770345156,
+      "mean_absolute_error": 34652.80706518491,
+      "rmse": 46092.76651780082,
+      "nrmse": 0.0026348154770348144,
       "median_absolute_relative_error": 0.0030986861164422333,
       "max_absolute_relative_error": 0.01787032950187254,
       "material": false,
@@ -422,11 +422,11 @@
       "bike_share": {
         "n": 5,
         "mean_reference": 0.14723795886355126,
-        "mean_absolute_error": 0.00010970590666982694,
-        "rmse": 0.00013640336297969906,
-        "nrmse": 0.003719634598744254,
+        "mean_absolute_error": 0.00010970590666982138,
+        "rmse": 0.00013640336297969006,
+        "nrmse": 0.0037196345987440087,
         "median_absolute_relative_error": 0.0003693792799216668,
-        "max_absolute_relative_error": 0.0015985943015324794
+        "max_absolute_relative_error": 0.0015985943015322782
       },
       "car_share": {
         "n": 5,
